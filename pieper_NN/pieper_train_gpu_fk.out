@@ -1,0 +1,38 @@
+======================================================================
+训练 Pieper 准则因果IK模型
+======================================================================
+核心特性:
+  1. Attention学习关节对末端位姿的影响权重
+  2. 分别对位置和姿态做FiLM调制
+  3. GNN学习关节间因果耦合
+
+加载数据集...
+加载窗口化数据集: /home/wsy/Desktop/casual/merged_training_data.npz
+  样本数: 3541118
+  窗口大小: 10
+  输入维度（位姿）: 7
+  输出维度（角度）: 7
+加载窗口化数据集: /home/wsy/Desktop/casual/merged_training_data.npz
+  样本数: 3541118
+  窗口大小: 10
+  输入维度（位姿）: 7
+  输出维度（角度）: 7
+训练集样本数: 3187006
+验证集样本数: 354112
+训练集数据增强: False
+验证集数据增强: False（始终关闭）
+
+创建模型: pieper_causal_ik
+模型参数量: 1.74M
+
+加载GPU FK模型（用于计算末端位姿）...
+✓ 成功加载GPU FK模型
+  左臂关节 ID: [16, 17, 18, 19, 20, 21, 22]
+
+开始训练（300 epochs）...
+Traceback (most recent call last):
+  File "/home/wsy/Desktop/casual/pieper_NN/train_pieper_model.py", line 369, in <module>
+    train()
+  File "/home/wsy/Desktop/casual/pieper_NN/train_pieper_model.py", line 298, in train
+    pin_model, pin_data, joint_ids, wrist_frame_id, target_angles
+NameError: name 'pin_model' is not defined

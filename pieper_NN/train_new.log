@@ -1,0 +1,94 @@
+======================================================================
+训练 Pieper 准则因果IK模型
+======================================================================
+核心特性:
+  1. Attention学习关节对末端位姿的影响权重
+  2. 分别对位置和姿态做FiLM调制
+  3. GNN学习关节间因果耦合
+
+加载数据集...
+加载窗口化数据集: /home/wsy/Desktop/casual/merged_training_data.npz
+  样本数: 3541118
+  窗口大小: 10
+  输入维度（位姿）: 7
+  输出维度（角度）: 7
+加载窗口化数据集: /home/wsy/Desktop/casual/merged_training_data.npz
+  样本数: 3541118
+  窗口大小: 10
+  输入维度（位姿）: 7
+  输出维度（角度）: 7
+训练集样本数: 3187006
+验证集样本数: 354112
+训练集数据增强: False
+验证集数据增强: False（始终关闭）
+
+创建模型: pieper_causal_ik
+模型参数量: 2.58M
+
+加载GPU FK模型（用于计算末端位姿）...
+✓ 成功加载GPU FK模型
+  左臂关节 ID: [16, 17, 18, 19, 20, 21, 22]
+加载断点...
+从第70 epoch继续
+
+开始训练（300 epochs）...
+Epoch [70/300] | Train Loss: 0.000015 | Val Loss: 0.000014 | Train R²: 0.999625 | Val R²: 0.999658 | IK: 0.0001 | FK: 0.000007 | GAP: 0.0001 | LR: 0.001000 | Time: 50.0s
+Epoch [71/300] | Train Loss: 0.000021 | Val Loss: 0.000010 | Train R²: 0.999579 | Val R²: 0.999688 | IK: 0.0001 | FK: 0.000012 | GAP: 0.0001 | LR: 0.000999 | Time: 49.9s
+Epoch [72/300] | Train Loss: 0.000015 | Val Loss: 0.000011 | Train R²: 0.999620 | Val R²: 0.999681 | IK: 0.0001 | FK: 0.000008 | GAP: 0.0001 | LR: 0.000999 | Time: 50.2s
+Epoch [73/300] | Train Loss: 0.000021 | Val Loss: 0.000014 | Train R²: 0.999581 | Val R²: 0.999682 | IK: 0.0001 | FK: 0.000012 | GAP: 0.0001 | LR: 0.000998 | Time: 50.0s
+Epoch [74/300] | Train Loss: 0.000012 | Val Loss: 0.000011 | Train R²: 0.999657 | Val R²: 0.999669 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000997 | Time: 50.1s
+Epoch [75/300] | Train Loss: 0.000023 | Val Loss: 0.000011 | Train R²: 0.999570 | Val R²: 0.999689 | IK: 0.0001 | FK: 0.000014 | GAP: 0.0001 | LR: 0.000995 | Time: 49.2s
+Epoch [76/300] | Train Loss: 0.000012 | Val Loss: 0.000012 | Train R²: 0.999656 | Val R²: 0.999670 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000994 | Time: 49.3s
+Epoch [77/300] | Train Loss: 0.000013 | Val Loss: 0.000010 | Train R²: 0.999646 | Val R²: 0.999684 | IK: 0.0001 | FK: 0.000006 | GAP: 0.0001 | LR: 0.000992 | Time: 49.0s
+Epoch [78/300] | Train Loss: 0.000012 | Val Loss: 0.000011 | Train R²: 0.999649 | Val R²: 0.999672 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000990 | Time: 48.6s
+Epoch [79/300] | Train Loss: 0.000012 | Val Loss: 0.000013 | Train R²: 0.999649 | Val R²: 0.999651 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000987 | Time: 49.0s
+Epoch [80/300] | Train Loss: 0.000012 | Val Loss: 0.000011 | Train R²: 0.999647 | Val R²: 0.999674 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000985 | Time: 49.0s
+Epoch [81/300] | Train Loss: 0.000012 | Val Loss: 0.000013 | Train R²: 0.999648 | Val R²: 0.999654 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000982 | Time: 49.8s
+Epoch [82/300] | Train Loss: 0.000012 | Val Loss: 0.000011 | Train R²: 0.999649 | Val R²: 0.999668 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000979 | Time: 50.4s
+Epoch [83/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999649 | Val R²: 0.999672 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000976 | Time: 50.1s
+Epoch [84/300] | Train Loss: 0.000011 | Val Loss: 0.000012 | Train R²: 0.999651 | Val R²: 0.999655 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000972 | Time: 50.6s
+Epoch [85/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999651 | Val R²: 0.999669 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000968 | Time: 50.7s
+Epoch [86/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999651 | Val R²: 0.999665 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000964 | Time: 50.6s
+Epoch [87/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999650 | Val R²: 0.999676 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000960 | Time: 50.2s
+Epoch [88/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999650 | Val R²: 0.999670 | IK: 0.0001 | FK: 0.000005 | GAP: 0.0001 | LR: 0.000955 | Time: 47.8s
+Epoch [89/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999652 | Val R²: 0.999668 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000951 | Time: 47.4s
+Epoch [90/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999651 | Val R²: 0.999666 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000946 | Time: 47.2s
+Epoch [91/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999652 | Val R²: 0.999671 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000940 | Time: 47.4s
+Epoch [92/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999653 | Val R²: 0.999680 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000935 | Time: 47.0s
+Epoch [93/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999653 | Val R²: 0.999666 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000929 | Time: 47.1s
+Epoch [94/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999651 | Val R²: 0.999677 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000923 | Time: 46.9s
+Epoch [95/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999652 | Val R²: 0.999675 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000917 | Time: 47.2s
+Epoch [96/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999653 | Val R²: 0.999676 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000911 | Time: 47.1s
+Epoch [97/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999653 | Val R²: 0.999672 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000905 | Time: 47.1s
+Epoch [98/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999653 | Val R²: 0.999682 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000898 | Time: 47.0s
+Epoch [99/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999653 | Val R²: 0.999670 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000891 | Time: 47.1s
+Epoch [100/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999654 | Val R²: 0.999675 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000884 | Time: 46.9s
+Epoch [101/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999654 | Val R²: 0.999679 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000877 | Time: 47.1s
+Epoch [102/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999654 | Val R²: 0.999678 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000869 | Time: 47.3s
+Epoch [103/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999654 | Val R²: 0.999676 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000862 | Time: 47.0s
+Epoch [104/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999656 | Val R²: 0.999672 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000854 | Time: 46.8s
+Epoch [105/300] | Train Loss: 0.000011 | Val Loss: 0.000011 | Train R²: 0.999654 | Val R²: 0.999675 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000846 | Time: 46.9s
+Epoch [106/300] | Train Loss: 0.000011 | Val Loss: 0.000010 | Train R²: 0.999656 | Val R²: 0.999680 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000837 | Time: 47.1s
+Epoch [107/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999656 | Val R²: 0.999673 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000829 | Time: 47.3s
+Epoch [108/300] | Train Loss: 0.000010 | Val Loss: 0.000011 | Train R²: 0.999656 | Val R²: 0.999664 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000821 | Time: 47.1s
+Epoch [109/300] | Train Loss: 0.000010 | Val Loss: 0.000013 | Train R²: 0.999657 | Val R²: 0.999657 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000812 | Time: 46.9s
+Epoch [110/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999657 | Val R²: 0.999679 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000803 | Time: 47.1s
+Epoch [111/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999656 | Val R²: 0.999672 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000794 | Time: 47.1s
+Epoch [112/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999657 | Val R²: 0.999679 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000785 | Time: 47.1s
+Epoch [113/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999656 | Val R²: 0.999685 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000776 | Time: 47.0s
+Epoch [114/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999658 | Val R²: 0.999671 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000766 | Time: 47.0s
+Epoch [115/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999658 | Val R²: 0.999677 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000757 | Time: 46.8s
+Epoch [116/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999658 | Val R²: 0.999670 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000747 | Time: 47.1s
+Epoch [117/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999658 | Val R²: 0.999671 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000737 | Time: 47.3s
+Epoch [118/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999656 | Val R²: 0.999680 | IK: 0.0001 | FK: 0.000004 | GAP: 0.0001 | LR: 0.000727 | Time: 47.1s
+Epoch [119/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999657 | Val R²: 0.999683 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000717 | Time: 47.0s
+Epoch [120/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999658 | Val R²: 0.999679 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000707 | Time: 47.1s
+Epoch [121/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999659 | Val R²: 0.999677 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000697 | Time: 46.9s
+Epoch [122/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999657 | Val R²: 0.999684 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000686 | Time: 47.5s
+Epoch [123/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999658 | Val R²: 0.999685 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000676 | Time: 47.9s
+Epoch [124/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999658 | Val R²: 0.999677 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000665 | Time: 48.0s
+Epoch [125/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999659 | Val R²: 0.999680 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000655 | Time: 47.1s
+Epoch [126/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999659 | Val R²: 0.999675 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000644 | Time: 47.6s
+Epoch [127/300] | Train Loss: 0.000010 | Val Loss: 0.000010 | Train R²: 0.999659 | Val R²: 0.999668 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000633 | Time: 47.7s
+Epoch [128/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999660 | Val R²: 0.999674 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000623 | Time: 47.7s
+Epoch [129/300] | Train Loss: 0.000010 | Val Loss: 0.000009 | Train R²: 0.999660 | Val R²: 0.999681 | IK: 0.0001 | FK: 0.000003 | GAP: 0.0001 | LR: 0.000612 | Time: 48.2s
