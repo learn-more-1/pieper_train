@@ -9,7 +9,7 @@ import numpy as np
 from causal_ik_model_pieper import PieperCausalIK
 from gpu_fk_wrapper import SimpleGPUFK
 import sys
-sys.path.insert(0, '/home/wsy/Desktop/casual/pieper_NN')
+# sys.path.insert(0, '/home/bonuli/Pieper/pieper1002')
 
 
 def load_grab_dataset(data_path, num_samples=10000):
@@ -93,7 +93,7 @@ def test_on_grab_data():
         num_layers=2
     ).cuda()
 
-    checkpoint = torch.load("/home/wsy/Desktop/casual/pieper1002/pieper_causal_ik_2.pth")
+    checkpoint = torch.load("/home/bonuli/Pieper/pieper1002/pieper_causal_ik_2.pth")
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
 
@@ -102,7 +102,7 @@ def test_on_grab_data():
     print(f"  训练验证损失: {checkpoint['best_val_loss']:.6f}")
 
     # 加载 GRAB 数据集
-    grab_data_path = "/home/wsy/Desktop/casual/GRAB_training_data.npz"
+    grab_data_path = "/data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz"
     X, y = load_grab_dataset(grab_data_path, num_samples=30000)
 
     # 创建 DataLoader
@@ -245,7 +245,7 @@ def test_on_grab_data():
     print("=" * 70)
 
     # 保存结果
-    with open('/home/wsy/Desktop/casual/pieper_NN/grab_test_results.txt', 'w') as f:
+    with open('/home/bonuli/Pieper/pieper1002/grab_test_results.txt', 'w') as f:
         f.write("=" * 70 + "\n")
         f.write("GRAB数据集测试结果\n")
         f.write("=" * 70 + "\n\n")
@@ -257,7 +257,7 @@ def test_on_grab_data():
         f.write(f"  平均: {pos_error_mean*1000:.3f} mm\n")
         f.write(f"  中位数: {pos_error_median*1000:.3f} mm\n")
 
-    print(f"\n✓ 结果已保存: /home/wsy/Desktop/casual/pieper_NN/grab_test_results.txt")
+    print(f"\n✓ 结果已保存: /home/bonuli/Pieper/pieper1002/grab_test_results.txt")
 
 
 if __name__ == '__main__':

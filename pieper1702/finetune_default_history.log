@@ -1,0 +1,514 @@
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  训练参数: default_history
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  模型类型: <class 'causal_ik_model_pieper2.PieperCausalIK'>
+  模型文件: causal_ik_model_pieper2
+  forward 方法支持 None: True
+  ✓ forward 方法支持 None 输入
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  模型类型: <class 'causal_ik_model_pieper2.PieperCausalIK'>
+  模型文件: causal_ik_model_pieper2
+  forward 方法支持 None: True
+  ✓ forward 方法支持 None 输入
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+  Epoch [0/30] | None Prob: 0.00 (actual: 0.10)
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  模型类型: <class 'causal_ik_model_pieper2.PieperCausalIK'>
+  模型文件: causal_ik_model_pieper2
+  forward 方法支持 None: True
+  ✓ forward 方法支持 None 输入
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 1.0
+  Epoch [0/30] | None Prob: 0.00 (actual: 1.00)
+  Epoch [0/30] Progress: 14.0% | Loss: 0.340405 | None Prob: 0.00
+  Epoch [0/30] Progress: 28.1% | Loss: 0.297012 | None Prob: 0.00
+  Epoch [0/30] Progress: 42.1% | Loss: 0.209255 | None Prob: 0.00
+  Epoch [0/30] Progress: 56.2% | Loss: 0.333164 | None Prob: 0.00
+  Epoch [0/30] Progress: 70.2% | Loss: 0.223045 | None Prob: 0.00
+  Epoch [0/30] Progress: 84.3% | Loss: 0.330190 | None Prob: 0.00
+  Epoch [0/30] Progress: 98.3% | Loss: 0.222983 | None Prob: 0.00
+
+Epoch [0/30] | Train Loss: 0.308403 | Val (with hist): 0.000342 | Val (no hist): 0.243324 | None Prob: 0.00
+  >>> 保存 (no_hist: 0.243324)
+  Epoch [1/30] | None Prob: 0.05 (actual: 1.00)
+  Epoch [1/30] Progress: 14.0% | Loss: 0.289078 | None Prob: 0.05
+  Epoch [1/30] Progress: 28.1% | Loss: 0.251818 | None Prob: 0.05
+  Epoch [1/30] Progress: 42.1% | Loss: 0.174688 | None Prob: 0.05
+  Epoch [1/30] Progress: 56.2% | Loss: 0.289223 | None Prob: 0.05
+  Epoch [1/30] Progress: 70.2% | Loss: 0.202402 | None Prob: 0.05
+  Epoch [1/30] Progress: 84.3% | Loss: 0.276961 | None Prob: 0.05
+  Epoch [1/30] Progress: 98.3% | Loss: 0.179740 | None Prob: 0.05
+
+Epoch [1/30] | Train Loss: 0.261565 | Val (with hist): 0.000342 | Val (no hist): 0.201007 | None Prob: 0.05
+  >>> 保存 (no_hist: 0.201007)
+  Epoch [2/30] | None Prob: 0.10 (actual: 1.00)
+  Epoch [2/30] Progress: 14.0% | Loss: 0.249361 | None Prob: 0.10
+  Epoch [2/30] Progress: 28.1% | Loss: 0.219562 | None Prob: 0.10
+  Epoch [2/30] Progress: 42.1% | Loss: 0.154780 | None Prob: 0.10
+  Epoch [2/30] Progress: 56.2% | Loss: 0.262942 | None Prob: 0.10
+  Epoch [2/30] Progress: 70.2% | Loss: 0.194308 | None Prob: 0.10
+  Epoch [2/30] Progress: 84.3% | Loss: 0.249555 | None Prob: 0.10
+  Epoch [2/30] Progress: 98.3% | Loss: 0.158527 | None Prob: 0.10
+
+Epoch [2/30] | Train Loss: 0.230442 | Val (with hist): 0.000342 | Val (no hist): 0.181817 | None Prob: 0.10
+  >>> 保存 (no_hist: 0.181817)
+  Epoch [3/30] | None Prob: 0.15 (actual: 1.00)
+  Epoch [3/30] Progress: 14.0% | Loss: 0.235027 | None Prob: 0.15
+  Epoch [3/30] Progress: 28.1% | Loss: 0.199616 | None Prob: 0.15
+  Epoch [3/30] Progress: 42.1% | Loss: 0.142971 | None Prob: 0.15
+  Epoch [3/30] Progress: 56.2% | Loss: 0.236265 | None Prob: 0.15
+  Epoch [3/30] Progress: 70.2% | Loss: 0.185715 | None Prob: 0.15
+  Epoch [3/30] Progress: 84.3% | Loss: 0.209525 | None Prob: 0.15
+  Epoch [3/30] Progress: 98.3% | Loss: 0.114153 | None Prob: 0.15
+
+Epoch [3/30] | Train Loss: 0.203229 | Val (with hist): 0.000342 | Val (no hist): 0.145347 | None Prob: 0.15
+  >>> 保存 (no_hist: 0.145347)
+  Epoch [4/30] | None Prob: 0.20 (actual: 1.00)
+  Epoch [4/30] Progress: 14.0% | Loss: 0.215999 | None Prob: 0.20
+  Epoch [4/30] Progress: 28.1% | Loss: 0.150717 | None Prob: 0.20
+  Epoch [4/30] Progress: 42.1% | Loss: 0.130684 | None Prob: 0.20
+  Epoch [4/30] Progress: 56.2% | Loss: 0.202498 | None Prob: 0.20
+  Epoch [4/30] Progress: 70.2% | Loss: 0.185612 | None Prob: 0.20
+  Epoch [4/30] Progress: 84.3% | Loss: 0.178621 | None Prob: 0.20
+  Epoch [4/30] Progress: 98.3% | Loss: 0.086628 | None Prob: 0.20
+
+Epoch [4/30] | Train Loss: 0.169754 | Val (with hist): 0.000342 | Val (no hist): 0.124740 | None Prob: 0.20
+  >>> 保存 (no_hist: 0.124740)
+  Epoch [5/30] | None Prob: 0.25 (actual: 0.25)
+======================================================================
+微调原始模型：适应无历史场景
+======================================================================
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/GRAB_training_data.npz
+  训练集: 1456243
+  验证集: 161805
+
+加载预训练模型: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_1101.pth
+  ✓ 成功加载预训练权重
+  模型类型: <class 'causal_ik_model_pieper2.PieperCausalIK'>
+  模型文件: causal_ik_model_pieper2
+  forward 方法支持 None: True
+  ✓ forward 方法支持 None 输入
+  训练参数: default_history (70 个)
+  总训练参数: 70
+  ✓ GPU FK
+
+开始微调...
+  batches/epoch: 712
+  curriculum: 0.0 → 0.5
+  Epoch [0/30] | None Prob: 0.00 (actual: 1.00)
+  Epoch [0/30] Progress: 14.0% | Loss: 0.340405 | None Prob: 0.00
+  Epoch [0/30] Progress: 28.1% | Loss: 0.297012 | None Prob: 0.00
+  Epoch [0/30] Progress: 42.1% | Loss: 0.209255 | None Prob: 0.00
+  Epoch [0/30] Progress: 56.2% | Loss: 0.333164 | None Prob: 0.00
+  Epoch [0/30] Progress: 70.2% | Loss: 0.223045 | None Prob: 0.00
+  Epoch [0/30] Progress: 84.3% | Loss: 0.330190 | None Prob: 0.00
+  Epoch [0/30] Progress: 98.3% | Loss: 0.222983 | None Prob: 0.00
+
+Epoch [0/30] | Train Loss: 0.308403 | Val (with hist): 0.000342 | Val (no hist): 0.243324 | None Prob: 0.00
+  >>> 保存 (no_hist: 0.243324)
+  Epoch [1/30] | None Prob: 0.03 (actual: 1.00)
+  Epoch [1/30] Progress: 14.0% | Loss: 0.289078 | None Prob: 0.03
+  Epoch [1/30] Progress: 28.1% | Loss: 0.251818 | None Prob: 0.03
+  Epoch [1/30] Progress: 42.1% | Loss: 0.174688 | None Prob: 0.03
+  Epoch [1/30] Progress: 56.2% | Loss: 0.289223 | None Prob: 0.03
+  Epoch [1/30] Progress: 70.2% | Loss: 0.202402 | None Prob: 0.03
+  Epoch [1/30] Progress: 84.3% | Loss: 0.276961 | None Prob: 0.03
+  Epoch [1/30] Progress: 98.3% | Loss: 0.179740 | None Prob: 0.03
+
+Epoch [1/30] | Train Loss: 0.261565 | Val (with hist): 0.000342 | Val (no hist): 0.201007 | None Prob: 0.03
+  >>> 保存 (no_hist: 0.201007)
+  Epoch [2/30] | None Prob: 0.07 (actual: 1.00)
+  Epoch [2/30] Progress: 14.0% | Loss: 0.249361 | None Prob: 0.07
+  Epoch [2/30] Progress: 28.1% | Loss: 0.219562 | None Prob: 0.07
+  Epoch [2/30] Progress: 42.1% | Loss: 0.154780 | None Prob: 0.07
+  Epoch [2/30] Progress: 56.2% | Loss: 0.262942 | None Prob: 0.07
+  Epoch [2/30] Progress: 70.2% | Loss: 0.194308 | None Prob: 0.07
+  Epoch [2/30] Progress: 84.3% | Loss: 0.249555 | None Prob: 0.07
+  Epoch [2/30] Progress: 98.3% | Loss: 0.158527 | None Prob: 0.07
+
+Epoch [2/30] | Train Loss: 0.230442 | Val (with hist): 0.000342 | Val (no hist): 0.181817 | None Prob: 0.07
+  >>> 保存 (no_hist: 0.181817)
+  Epoch [3/30] | None Prob: 0.10 (actual: 1.00)
+  Epoch [3/30] Progress: 14.0% | Loss: 0.235027 | None Prob: 0.10
+  Epoch [3/30] Progress: 28.1% | Loss: 0.199616 | None Prob: 0.10
+  Epoch [3/30] Progress: 42.1% | Loss: 0.142971 | None Prob: 0.10
+  Epoch [3/30] Progress: 56.2% | Loss: 0.236265 | None Prob: 0.10
+  Epoch [3/30] Progress: 70.2% | Loss: 0.185715 | None Prob: 0.10
+  Epoch [3/30] Progress: 84.3% | Loss: 0.209525 | None Prob: 0.10
+  Epoch [3/30] Progress: 98.3% | Loss: 0.114153 | None Prob: 0.10
+
+Epoch [3/30] | Train Loss: 0.203229 | Val (with hist): 0.000342 | Val (no hist): 0.145347 | None Prob: 0.10
+  >>> 保存 (no_hist: 0.145347)
+  Epoch [4/30] | None Prob: 0.13 (actual: 1.00)
+  Epoch [4/30] Progress: 14.0% | Loss: 0.215999 | None Prob: 0.13
+  Epoch [4/30] Progress: 28.1% | Loss: 0.150717 | None Prob: 0.13
+  Epoch [4/30] Progress: 42.1% | Loss: 0.130684 | None Prob: 0.13
+  Epoch [4/30] Progress: 56.2% | Loss: 0.202498 | None Prob: 0.13
+  Epoch [4/30] Progress: 70.2% | Loss: 0.185612 | None Prob: 0.13
+  Epoch [4/30] Progress: 84.3% | Loss: 0.178621 | None Prob: 0.13
+  Epoch [4/30] Progress: 98.3% | Loss: 0.086628 | None Prob: 0.13
+
+Epoch [4/30] | Train Loss: 0.169754 | Val (with hist): 0.000342 | Val (no hist): 0.124740 | None Prob: 0.13
+  >>> 保存 (no_hist: 0.124740)
+  Epoch [5/30] | None Prob: 0.17 (actual: 1.00)
+  Epoch [5/30] Progress: 14.0% | Loss: 0.209735 | None Prob: 0.17
+  Epoch [5/30] Progress: 28.1% | Loss: 0.126202 | None Prob: 0.17
+  Epoch [5/30] Progress: 42.1% | Loss: 0.130604 | None Prob: 0.17
+  Epoch [5/30] Progress: 56.2% | Loss: 0.188234 | None Prob: 0.17
+  Epoch [5/30] Progress: 70.2% | Loss: 0.192866 | None Prob: 0.17
+  Epoch [5/30] Progress: 84.3% | Loss: 0.162350 | None Prob: 0.17
+  Epoch [5/30] Progress: 98.3% | Loss: 0.073573 | None Prob: 0.17
+
+Epoch [5/30] | Train Loss: 0.154539 | Val (with hist): 0.000342 | Val (no hist): 0.115277 | None Prob: 0.17
+  >>> 保存 (no_hist: 0.115277)
+  Epoch [6/30] | None Prob: 0.20 (actual: 1.00)
+  Epoch [6/30] Progress: 14.0% | Loss: 0.208088 | None Prob: 0.20
+  Epoch [6/30] Progress: 28.1% | Loss: 0.113692 | None Prob: 0.20
+  Epoch [6/30] Progress: 42.1% | Loss: 0.133522 | None Prob: 0.20
+  Epoch [6/30] Progress: 56.2% | Loss: 0.181414 | None Prob: 0.20
+  Epoch [6/30] Progress: 70.2% | Loss: 0.201396 | None Prob: 0.20
+  Epoch [6/30] Progress: 84.3% | Loss: 0.151310 | None Prob: 0.20
+  Epoch [6/30] Progress: 98.3% | Loss: 0.065624 | None Prob: 0.20
+
+Epoch [6/30] | Train Loss: 0.146939 | Val (with hist): 0.000342 | Val (no hist): 0.110547 | None Prob: 0.20
+  >>> 保存 (no_hist: 0.110547)
+  Epoch [7/30] | None Prob: 0.23 (actual: 1.00)
+  Epoch [7/30] Progress: 14.0% | Loss: 0.208242 | None Prob: 0.23
+  Epoch [7/30] Progress: 28.1% | Loss: 0.104727 | None Prob: 0.23
+  Epoch [7/30] Progress: 42.1% | Loss: 0.137724 | None Prob: 0.23
+  Epoch [7/30] Progress: 56.2% | Loss: 0.176427 | None Prob: 0.23
+  Epoch [7/30] Progress: 70.2% | Loss: 0.210715 | None Prob: 0.23
+  Epoch [7/30] Progress: 84.3% | Loss: 0.144483 | None Prob: 0.23
+  Epoch [7/30] Progress: 98.3% | Loss: 0.062306 | None Prob: 0.23
+
+Epoch [7/30] | Train Loss: 0.142339 | Val (with hist): 0.000342 | Val (no hist): 0.108433 | None Prob: 0.23
+  >>> 保存 (no_hist: 0.108433)
+  Epoch [8/30] | None Prob: 0.27 (actual: 1.00)
+  Epoch [8/30] Progress: 14.0% | Loss: 0.207131 | None Prob: 0.27
+  Epoch [8/30] Progress: 28.1% | Loss: 0.100147 | None Prob: 0.27
+  Epoch [8/30] Progress: 42.1% | Loss: 0.139928 | None Prob: 0.27
+  Epoch [8/30] Progress: 56.2% | Loss: 0.174485 | None Prob: 0.27
+  Epoch [8/30] Progress: 70.2% | Loss: 0.215217 | None Prob: 0.27
+  Epoch [8/30] Progress: 84.3% | Loss: 0.139763 | None Prob: 0.27
+  Epoch [8/30] Progress: 98.3% | Loss: 0.061017 | None Prob: 0.27
+
+Epoch [8/30] | Train Loss: 0.140222 | Val (with hist): 0.000342 | Val (no hist): 0.107117 | None Prob: 0.27
+  >>> 保存 (no_hist: 0.107117)
+  Epoch [9/30] | None Prob: 0.30 (actual: 1.00)
+  Epoch [9/30] Progress: 14.0% | Loss: 0.204536 | None Prob: 0.30
+  Epoch [9/30] Progress: 28.1% | Loss: 0.097798 | None Prob: 0.30
+  Epoch [9/30] Progress: 42.1% | Loss: 0.140547 | None Prob: 0.30
+  Epoch [9/30] Progress: 56.2% | Loss: 0.173478 | None Prob: 0.30
+  Epoch [9/30] Progress: 70.2% | Loss: 0.217334 | None Prob: 0.30
+  Epoch [9/30] Progress: 84.3% | Loss: 0.136738 | None Prob: 0.30
+  Epoch [9/30] Progress: 98.3% | Loss: 0.060198 | None Prob: 0.30
+
+Epoch [9/30] | Train Loss: 0.138860 | Val (with hist): 0.000342 | Val (no hist): 0.106075 | None Prob: 0.30
+  >>> 保存 (no_hist: 0.106075)
+  Epoch [10/30] | None Prob: 0.33 (actual: 0.33)
+  Epoch [10/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.33
+  Epoch [10/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.33
+  Epoch [10/30] Progress: 42.1% | Loss: 0.142460 | None Prob: 0.33
+  Epoch [10/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.33
+  Epoch [10/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.33
+  Epoch [10/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.33
+  Epoch [10/30] Progress: 98.3% | Loss: 0.059623 | None Prob: 0.33
+
+Epoch [10/30] | Train Loss: 0.046885 | Val (with hist): 0.000342 | Val (no hist): 0.105529 | None Prob: 0.33
+  >>> 保存 (no_hist: 0.105529)
+  Epoch [11/30] | None Prob: 0.37 (actual: 0.37)
+  Epoch [11/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.37
+  Epoch [11/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.37
+  Epoch [11/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.37
+  Epoch [11/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.37
+  Epoch [11/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.37
+  Epoch [11/30] Progress: 84.3% | Loss: 0.134483 | None Prob: 0.37
+  Epoch [11/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.37
+
+Epoch [11/30] | Train Loss: 0.056822 | Val (with hist): 0.000342 | Val (no hist): 0.105600 | None Prob: 0.37
+  Epoch [12/30] | None Prob: 0.40 (actual: 0.40)
+  Epoch [12/30] Progress: 14.0% | Loss: 0.200555 | None Prob: 0.40
+  Epoch [12/30] Progress: 28.1% | Loss: 0.096636 | None Prob: 0.40
+  Epoch [12/30] Progress: 42.1% | Loss: 0.140263 | None Prob: 0.40
+  Epoch [12/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.40
+  Epoch [12/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.40
+  Epoch [12/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.40
+  Epoch [12/30] Progress: 98.3% | Loss: 0.060424 | None Prob: 0.40
+
+Epoch [12/30] | Train Loss: 0.054524 | Val (with hist): 0.000342 | Val (no hist): 0.105094 | None Prob: 0.40
+  >>> 保存 (no_hist: 0.105094)
+  Epoch [13/30] | None Prob: 0.43 (actual: 0.43)
+  Epoch [13/30] Progress: 14.0% | Loss: 0.199184 | None Prob: 0.43
+  Epoch [13/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.43
+  Epoch [13/30] Progress: 42.1% | Loss: 0.140122 | None Prob: 0.43
+  Epoch [13/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.43
+  Epoch [13/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.43
+  Epoch [13/30] Progress: 84.3% | Loss: 0.132129 | None Prob: 0.43
+  Epoch [13/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.43
+
+Epoch [13/30] | Train Loss: 0.063343 | Val (with hist): 0.000342 | Val (no hist): 0.104832 | None Prob: 0.43
+  >>> 保存 (no_hist: 0.104832)
+  Epoch [14/30] | None Prob: 0.47 (actual: 0.47)
+  Epoch [14/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.47
+  Epoch [14/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.47
+  Epoch [14/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.47
+  Epoch [14/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.47
+  Epoch [14/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.47
+  Epoch [14/30] Progress: 84.3% | Loss: 0.130904 | None Prob: 0.47
+  Epoch [14/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.47
+
+Epoch [14/30] | Train Loss: 0.067731 | Val (with hist): 0.000342 | Val (no hist): 0.103684 | None Prob: 0.47
+  >>> 保存 (no_hist: 0.103684)
+  Epoch [15/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [15/30] Progress: 14.0% | Loss: 0.196010 | None Prob: 0.50
+  Epoch [15/30] Progress: 28.1% | Loss: 0.096388 | None Prob: 0.50
+  Epoch [15/30] Progress: 42.1% | Loss: 0.139248 | None Prob: 0.50
+  Epoch [15/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [15/30] Progress: 70.2% | Loss: 0.218943 | None Prob: 0.50
+  Epoch [15/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [15/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.50
+
+Epoch [15/30] | Train Loss: 0.073860 | Val (with hist): 0.000342 | Val (no hist): 0.103489 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.103489)
+  Epoch [16/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [16/30] Progress: 14.0% | Loss: 0.195729 | None Prob: 0.50
+  Epoch [16/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.50
+  Epoch [16/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [16/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [16/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [16/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [16/30] Progress: 98.3% | Loss: 0.059784 | None Prob: 0.50
+
+Epoch [16/30] | Train Loss: 0.070555 | Val (with hist): 0.000342 | Val (no hist): 0.103191 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.103191)
+  Epoch [17/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [17/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [17/30] Progress: 28.1% | Loss: 0.096072 | None Prob: 0.50
+  Epoch [17/30] Progress: 42.1% | Loss: 0.140104 | None Prob: 0.50
+  Epoch [17/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [17/30] Progress: 70.2% | Loss: 0.220196 | None Prob: 0.50
+  Epoch [17/30] Progress: 84.3% | Loss: 0.129217 | None Prob: 0.50
+  Epoch [17/30] Progress: 98.3% | Loss: 0.058789 | None Prob: 0.50
+
+Epoch [17/30] | Train Loss: 0.067097 | Val (with hist): 0.000342 | Val (no hist): 0.102610 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.102610)
+  Epoch [18/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [18/30] Progress: 14.0% | Loss: 0.194647 | None Prob: 0.50
+  Epoch [18/30] Progress: 28.1% | Loss: 0.094875 | None Prob: 0.50
+  Epoch [18/30] Progress: 42.1% | Loss: 0.139898 | None Prob: 0.50
+  Epoch [18/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [18/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [18/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [18/30] Progress: 98.3% | Loss: 0.058601 | None Prob: 0.50
+
+Epoch [18/30] | Train Loss: 0.068237 | Val (with hist): 0.000342 | Val (no hist): 0.102601 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.102601)
+  Epoch [19/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [19/30] Progress: 14.0% | Loss: 0.194214 | None Prob: 0.50
+  Epoch [19/30] Progress: 28.1% | Loss: 0.094591 | None Prob: 0.50
+  Epoch [19/30] Progress: 42.1% | Loss: 0.140871 | None Prob: 0.50
+  Epoch [19/30] Progress: 56.2% | Loss: 0.172206 | None Prob: 0.50
+  Epoch [19/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [19/30] Progress: 84.3% | Loss: 0.128016 | None Prob: 0.50
+  Epoch [19/30] Progress: 98.3% | Loss: 0.058124 | None Prob: 0.50
+
+Epoch [19/30] | Train Loss: 0.068403 | Val (with hist): 0.000342 | Val (no hist): 0.102168 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.102168)
+  Epoch [20/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [20/30] Progress: 14.0% | Loss: 0.194421 | None Prob: 0.50
+  Epoch [20/30] Progress: 28.1% | Loss: 0.094346 | None Prob: 0.50
+  Epoch [20/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [20/30] Progress: 56.2% | Loss: 0.172417 | None Prob: 0.50
+  Epoch [20/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [20/30] Progress: 84.3% | Loss: 0.127557 | None Prob: 0.50
+  Epoch [20/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.50
+
+Epoch [20/30] | Train Loss: 0.073309 | Val (with hist): 0.000342 | Val (no hist): 0.101848 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.101848)
+  Epoch [21/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [21/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [21/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.50
+  Epoch [21/30] Progress: 42.1% | Loss: 0.140524 | None Prob: 0.50
+  Epoch [21/30] Progress: 56.2% | Loss: 0.172543 | None Prob: 0.50
+  Epoch [21/30] Progress: 70.2% | Loss: 0.223210 | None Prob: 0.50
+  Epoch [21/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [21/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.50
+
+Epoch [21/30] | Train Loss: 0.068655 | Val (with hist): 0.000342 | Val (no hist): 0.101436 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.101436)
+  Epoch [22/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [22/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [22/30] Progress: 28.1% | Loss: 0.094186 | None Prob: 0.50
+  Epoch [22/30] Progress: 42.1% | Loss: 0.139950 | None Prob: 0.50
+  Epoch [22/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [22/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [22/30] Progress: 84.3% | Loss: 0.126052 | None Prob: 0.50
+  Epoch [22/30] Progress: 98.3% | Loss: 0.058383 | None Prob: 0.50
+
+Epoch [22/30] | Train Loss: 0.069367 | Val (with hist): 0.000342 | Val (no hist): 0.101424 | None Prob: 0.50
+  >>> 保存 (no_hist: 0.101424)
+  Epoch [23/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [23/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [23/30] Progress: 28.1% | Loss: 0.093869 | None Prob: 0.50
+  Epoch [23/30] Progress: 42.1% | Loss: 0.140051 | None Prob: 0.50
+  Epoch [23/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [23/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [23/30] Progress: 84.3% | Loss: 0.126260 | None Prob: 0.50
+  Epoch [23/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.50
+
+Epoch [23/30] | Train Loss: 0.071414 | Val (with hist): 0.000342 | Val (no hist): 0.101503 | None Prob: 0.50
+  Epoch [24/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [24/30] Progress: 14.0% | Loss: 0.190500 | None Prob: 0.50
+  Epoch [24/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.50
+  Epoch [24/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [24/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [24/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [24/30] Progress: 84.3% | Loss: 0.126013 | None Prob: 0.50
+  Epoch [24/30] Progress: 98.3% | Loss: 0.058597 | None Prob: 0.50
+
+Epoch [24/30] | Train Loss: 0.072392 | Val (with hist): 0.000342 | Val (no hist): 0.101853 | None Prob: 0.50
+  Epoch [25/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [25/30] Progress: 14.0% | Loss: 0.191993 | None Prob: 0.50
+  Epoch [25/30] Progress: 28.1% | Loss: 0.093366 | None Prob: 0.50
+  Epoch [25/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [25/30] Progress: 56.2% | Loss: 0.172056 | None Prob: 0.50
+  Epoch [25/30] Progress: 70.2% | Loss: 0.223540 | None Prob: 0.50
+  Epoch [25/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [25/30] Progress: 98.3% | Loss: 0.000012 | None Prob: 0.50
+
+Epoch [25/30] | Train Loss: 0.066299 | Val (with hist): 0.000342 | Val (no hist): 0.102287 | None Prob: 0.50
+  Epoch [26/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [26/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [26/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.50
+  Epoch [26/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [26/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [26/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [26/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [26/30] Progress: 98.3% | Loss: 0.058783 | None Prob: 0.50
+
+Epoch [26/30] | Train Loss: 0.068336 | Val (with hist): 0.000342 | Val (no hist): 0.102548 | None Prob: 0.50
+  Epoch [27/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [27/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [27/30] Progress: 28.1% | Loss: 0.000105 | None Prob: 0.50
+  Epoch [27/30] Progress: 42.1% | Loss: 0.140777 | None Prob: 0.50
+  Epoch [27/30] Progress: 56.2% | Loss: 0.000391 | None Prob: 0.50
+  Epoch [27/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [27/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [27/30] Progress: 98.3% | Loss: 0.058558 | None Prob: 0.50
+
+Epoch [27/30] | Train Loss: 0.073258 | Val (with hist): 0.000342 | Val (no hist): 0.102566 | None Prob: 0.50
+  Epoch [28/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [28/30] Progress: 14.0% | Loss: 0.000863 | None Prob: 0.50
+  Epoch [28/30] Progress: 28.1% | Loss: 0.092079 | None Prob: 0.50
+  Epoch [28/30] Progress: 42.1% | Loss: 0.000174 | None Prob: 0.50
+  Epoch [28/30] Progress: 56.2% | Loss: 0.171637 | None Prob: 0.50
+  Epoch [28/30] Progress: 70.2% | Loss: 0.223340 | None Prob: 0.50
+  Epoch [28/30] Progress: 84.3% | Loss: 0.125933 | None Prob: 0.50
+  Epoch [28/30] Progress: 98.3% | Loss: 0.058707 | None Prob: 0.50
+
+Epoch [28/30] | Train Loss: 0.072058 | Val (with hist): 0.000342 | Val (no hist): 0.102623 | None Prob: 0.50
+  Epoch [29/30] | None Prob: 0.50 (actual: 0.50)
+  Epoch [29/30] Progress: 14.0% | Loss: 0.192095 | None Prob: 0.50
+  Epoch [29/30] Progress: 28.1% | Loss: 0.091708 | None Prob: 0.50
+  Epoch [29/30] Progress: 42.1% | Loss: 0.140489 | None Prob: 0.50
+  Epoch [29/30] Progress: 56.2% | Loss: 0.171906 | None Prob: 0.50
+  Epoch [29/30] Progress: 70.2% | Loss: 0.001307 | None Prob: 0.50
+  Epoch [29/30] Progress: 84.3% | Loss: 0.000397 | None Prob: 0.50
+  Epoch [29/30] Progress: 98.3% | Loss: 0.058631 | None Prob: 0.50
+
+Epoch [29/30] | Train Loss: 0.075230 | Val (with hist): 0.000342 | Val (no hist): 0.102465 | None Prob: 0.50
+
+微调完成！
+  最优验证损失（无历史）: 0.101424
+  模型保存到: /home/bonuli/Pieper/pieper1101/pieper_causal_ik_GRAB_adapted.pth
+
+最终效果测试:
+  有历史 MAE: 0.002327
+  无历史 MAE: 0.198944

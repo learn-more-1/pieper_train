@@ -6,10 +6,12 @@
 
 import torch
 import numpy as np
-from causal_ik_model_pieper2 import PieperCausalIK
+from train_gnn_film_model import GNNFiLMIK
 from gpu_fk_wrapper import SimpleGPUFK
 import sys
-sys.path.insert(0, '/home/wsy/Desktop/casual/pieper_NN')
+sys.path.insert(0, '/home/bonuli/Pieper')
+sys.path.insert(0, '/home/bonuli/Pieper/pieper1802')
+from pinocchio_fk import PinocchioFK
 # from pieper_sefw import PieperCausalIK   # FiLM版本（shoulder-es-wristyaw）
 
 def load_grab_dataset(data_path, num_samples=10000):
@@ -86,15 +88,16 @@ def test_on_grab_data():
     print("=" * 70)
 
     # 加载模型
-    model = PieperCausalIK(
+    model = GNNFiLMIK(
         num_joints=7,
         num_frames=10,
         hidden_dim=256,
         num_layers=2
-    ).cuda()
+    )
 
-    checkpoint = torch.load("/home/wsy/Desktop/casual/pieper1101/pieper_causal_ik_1101.pth")
+    checkpoint = torch.load("/home/bonuli/Pieper/pieper1101/gnn_film_ik_1101.pth")
     model.load_state_dict(checkpoint['model_state_dict'])
+    model = model.cuda()
     model.eval()
 
     # print(f"\n✓ 加载模型: pieper_causal_ik_092.pth")
@@ -102,14 +105,14 @@ def test_on_grab_data():
     print(f"  训练验证损失: {checkpoint['best_val_loss']:.6f}")
 
     # 加载 GRAB 数据集
-    grab_data_path = "/home/wsy/Desktop/casual/GRAB_training_data.npz"
-    X, y = load_grab_dataset(grab_data_path, num_samples=30000)
+    grab_data_path = "/data0/wwb_data/ygx_data/data_ygx_pose+dof/SFU_G1_training_data.npz"
+    X, y = load_grab_dataset(grab_data_path, num_samples=10000)
 
     # 创建 DataLoader
     loader = create_dataloader(X, y, batch_size=512)
 
-    # 加载 GPU FK
-    gpu_fk = SimpleGPUFK()
+    # 加载 Pinocchio FK
+    pinocchio_fk = PinocchioFK()
 
     # 测试
     print("\n" + "=" * 70)
@@ -136,9 +139,9 @@ def test_on_grab_data():
                 batch_human_pose[:, 3:7]  # 人臂姿态
             )
 
-            # FK位置
-            pred_pos, _ = gpu_fk.forward(pred_angles), None
-            target_pos, _ = gpu_fk.forward(batch_y), None
+            # FK位置 (使用 Pinocchio)
+            pred_pos = pinocchio_fk.forward(pred_angles)
+            target_pos = pinocchio_fk.forward(batch_y)
 
             # 收集结果
             all_pred_angles.append(pred_angles.cpu().numpy())
@@ -245,7 +248,7 @@ def test_on_grab_data():
     print("=" * 70)
 
     # 保存结果
-    with open('/home/wsy/Desktop/casual/pieper_NN/grab_test_results.txt', 'w') as f:
+    with open('/home/bonuli/Pieper/pieper1101/grab_test_results.txt', 'w') as f:
         f.write("=" * 70 + "\n")
         f.write("GRAB数据集测试结果\n")
         f.write("=" * 70 + "\n\n")

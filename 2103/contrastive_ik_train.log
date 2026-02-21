@@ -1,0 +1,326 @@
+================================================================================
+对比学习风格 IK 模型训练 (2103版本)
+================================================================================
+核心特性:
+  1. 训练时用 history_joints 监督风格编码器
+  2. 验证时只用 history_poses 测试泛化性
+  3. 对比损失让模型学会从末端轨迹推断运动风格
+  4. 风格维度: 128
+  5. 对比损失权重: 0.1
+  6. 温度系数: 0.07
+
+关节损失权重:
+  J0 (ShoulderPitch  ): 1.60
+  J1 (ShoulderRoll   ): 2.00
+  J2 (ShoulderYaw    ): 1.60
+  J3 (Elbow          ): 2.50
+  J4 (ForearmRoll    ): 1.00
+  J5 (WristYaw       ): 0.70
+  J6 (WristPitch     ): 0.60
+
+加载数据集...
+加载窗口化数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  输入维度（机器人角度）: 7
+  输出维度（人位姿+机器人角度）: 14
+加载窗口化数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  输入维度（机器人角度）: 7
+  输出维度（人位姿+机器人角度）: 14
+训练集样本数: 3253229
+验证集样本数: 361470
+训练集数据增强: False
+验证集数据增强: False（始终关闭）
+
+计算数据集统计信息...
+
+创建模型: contrastive_ik
+模型总参数量: 2.13M
+可训练参数量: 2.13M
+
+加载 FK 模型...
+✓ Pinocchio模型加载成功
+  URDF: /home/bonuli/xr_teleoperate/assets/g1/g1_body29_hand14.urdf
+  关节数: 7
+  腕部frame: left_wrist_yaw_link (ID: 56)
+✓ 成功加载 Pinocchio FK 模型
+✓ FK 模型加载成功
+
+开始训练（150 epochs）...
+--------------------------------------------------------------------------------
+================================================================================
+对比学习风格 IK 模型训练 (2103版本)
+================================================================================
+核心特性:
+  1. 训练时用 history_joints 监督风格编码器
+  2. 验证时只用 history_poses 测试泛化性
+  3. 对比损失让模型学会从末端轨迹推断运动风格
+  4. 风格维度: 128
+  5. 对比损失权重: 0.1
+  6. 温度系数: 0.07
+
+关节损失权重:
+  J0 (ShoulderPitch  ): 1.60
+  J1 (ShoulderRoll   ): 2.00
+  J2 (ShoulderYaw    ): 1.60
+  J3 (Elbow          ): 2.50
+  J4 (ForearmRoll    ): 1.00
+  J5 (WristYaw       ): 0.70
+  J6 (WristPitch     ): 0.60
+
+加载数据集...
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+训练集样本数: 3253229
+验证集样本数: 361470
+
+计算数据集统计信息...
+
+创建模型: contrastive_ik
+模型总参数量: 2.13M
+可训练参数量: 2.13M
+
+加载 FK 模型...
+✓ Pinocchio模型加载成功
+  URDF: /home/bonuli/xr_teleoperate/assets/g1/g1_body29_hand14.urdf
+  关节数: 7
+  腕部frame: left_wrist_yaw_link (ID: 56)
+✓ 成功加载 Pinocchio FK 模型
+✓ FK 模型加载成功
+
+开始训练（150 epochs）...
+--------------------------------------------------------------------------------
+================================================================================
+对比学习风格 IK 模型训练 (2103版本)
+================================================================================
+核心特性:
+  1. 训练时用 history_joints 监督风格编码器
+  2. 验证时只用 history_poses 测试泛化性
+  3. 对比损失让模型学会从末端轨迹推断运动风格
+  4. 风格维度: 128
+  5. 对比损失权重: 0.1
+  6. 温度系数: 0.07
+
+关节损失权重:
+  J0 (ShoulderPitch  ): 1.60
+  J1 (ShoulderRoll   ): 2.00
+  J2 (ShoulderYaw    ): 1.60
+  J3 (Elbow          ): 2.50
+  J4 (ForearmRoll    ): 1.00
+  J5 (WristYaw       ): 0.70
+  J6 (WristPitch     ): 0.60
+
+加载数据集...
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+训练集样本数: 3253229
+验证集样本数: 361470
+
+计算数据集统计信息...
+
+创建模型: contrastive_ik
+模型总参数量: 2.13M
+可训练参数量: 2.13M
+
+加载 FK 模型...
+✓ Pinocchio模型加载成功
+  URDF: /home/bonuli/xr_teleoperate/assets/g1/g1_body29_hand14.urdf
+  关节数: 7
+  腕部frame: left_wrist_yaw_link (ID: 56)
+✓ 成功加载 Pinocchio FK 模型
+✓ FK 模型加载成功
+
+开始训练（150 epochs）...
+--------------------------------------------------------------------------------
+Epoch [  0/150] | Train Loss: 0.150766 | Val Loss: 0.199978 | Train R²: 0.9768 | Val R²: 0.7117 | IK: 0.0121/0.1962 | Cont: 1.3831 | StyleSim: 0.696/0.803 | LR: 0.000999 | Time: 154.2s
+  >>> 保存最优模型（验证损失：0.199978，风格相似度：0.803）
+Epoch [  1/150] | Train Loss: 0.080340 | Val Loss: 0.236243 | Train R²: 0.9880 | Val R²: 0.6456 | IK: 0.0062/0.2318 | Cont: 0.7401 | StyleSim: 0.800/0.835 | LR: 0.000996 | Time: 155.8s
+Epoch [  2/150] | Train Loss: 0.066123 | Val Loss: 0.244754 | Train R²: 0.9892 | Val R²: 0.6234 | IK: 0.0055/0.2400 | Cont: 0.6044 | StyleSim: 0.823/0.851 | LR: 0.000991 | Time: 155.1s
+Epoch [  3/150] | Train Loss: 0.059543 | Val Loss: 0.270850 | Train R²: 0.9899 | Val R²: 0.5741 | IK: 0.0051/0.2658 | Cont: 0.5428 | StyleSim: 0.836/0.861 | LR: 0.000984 | Time: 162.8s
+Epoch [  4/150] | Train Loss: 0.054404 | Val Loss: 0.303029 | Train R²: 0.9904 | Val R²: 0.5333 | IK: 0.0049/0.2972 | Cont: 0.4940 | StyleSim: 0.845/0.865 | LR: 0.000976 | Time: 151.3s
+Epoch [  5/150] | Train Loss: 0.048391 | Val Loss: 0.331434 | Train R²: 0.9907 | Val R²: 0.4855 | IK: 0.0047/0.3250 | Cont: 0.4359 | StyleSim: 0.849/0.871 | LR: 0.000965 | Time: 154.0s
+Epoch [  6/150] | Train Loss: 0.044423 | Val Loss: 0.349606 | Train R²: 0.9910 | Val R²: 0.4589 | IK: 0.0045/0.3429 | Cont: 0.3977 | StyleSim: 0.853/0.874 | LR: 0.000952 | Time: 156.0s
+Epoch [  7/150] | Train Loss: 0.041896 | Val Loss: 0.371403 | Train R²: 0.9912 | Val R²: 0.4191 | IK: 0.0044/0.3641 | Cont: 0.3739 | StyleSim: 0.857/0.878 | LR: 0.000938 | Time: 153.1s
+Epoch [  8/150] | Train Loss: 0.040010 | Val Loss: 0.391698 | Train R²: 0.9915 | Val R²: 0.3866 | IK: 0.0043/0.3840 | Cont: 0.3564 | StyleSim: 0.859/0.881 | LR: 0.000922 | Time: 148.5s
+Epoch [  9/150] | Train Loss: 0.038337 | Val Loss: 0.436959 | Train R²: 0.9916 | Val R²: 0.3066 | IK: 0.0042/0.4284 | Cont: 0.3407 | StyleSim: 0.861/0.882 | LR: 0.000905 | Time: 149.1s
+Epoch [ 10/150] | Train Loss: 0.036733 | Val Loss: 0.454686 | Train R²: 0.9918 | Val R²: 0.2670 | IK: 0.0041/0.4462 | Cont: 0.3256 | StyleSim: 0.862/0.884 | LR: 0.000885 | Time: 138.6s
+================================================================================
+对比学习风格 IK 模型训练 (2103版本)
+================================================================================
+核心特性:
+  1. 训练时用 history_joints 监督风格编码器
+  2. 验证时只用 history_poses 测试泛化性
+  3. 对比损失让模型学会从末端轨迹推断运动风格
+  4. 风格维度: 128
+  5. 对比损失权重: 0.05
+  6. 温度系数: 0.07
+  7. 训练时推理模拟概率: 0.3（防过拟合）
+================================================================================
+对比学习风格 IK 模型训练 (2103版本)
+================================================================================
+核心特性:
+  1. 训练时用 history_joints 监督风格编码器
+  2. 验证时只用 history_poses 测试泛化性
+  3. 对比损失让模型学会从末端轨迹推断运动风格
+  4. 风格维度: 128
+  5. 对比损失权重: 0.05
+  6. 温度系数: 0.07
+  7. 训练时推理模拟概率: 0.3（防过拟合）
+  8. 早停耐心值: 10 轮
+
+关节损失权重:
+  J0 (ShoulderPitch  ): 1.60
+  J1 (ShoulderRoll   ): 2.00
+  J2 (ShoulderYaw    ): 1.60
+  J3 (Elbow          ): 2.50
+  J4 (ForearmRoll    ): 1.00
+  J5 (WristYaw       ): 0.70
+  J6 (WristPitch     ): 0.60
+
+加载数据集...
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+加载对比学习数据集: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  样本数: 3614699
+  窗口大小: 10
+  X_full 维度（人位姿+机器人角度）: 14
+  y 有 pose: True
+训练集样本数: 3253229
+验证集样本数: 361470
+
+计算数据集统计信息...
+
+创建模型: contrastive_ik
+模型总参数量: 2.13M
+可训练参数量: 2.13M
+
+加载 FK 模型...
+✓ Pinocchio模型加载成功
+  URDF: /home/bonuli/xr_teleoperate/assets/g1/g1_body29_hand14.urdf
+  关节数: 7
+  腕部frame: left_wrist_yaw_link (ID: 56)
+✓ 成功加载 Pinocchio FK 模型
+✓ FK 模型加载成功
+
+开始训练（150 epochs）...
+--------------------------------------------------------------------------------
+Epoch [  0/150] | Train Loss: 0.119304 | Val Loss: 0.140539 | Train R²: 0.9136 | Val R²: 0.7997 | IK: 0.0553/0.1378 | Cont: 1.2581 | StyleSim: 0.479/0.752 | LR: 0.000999 | Time: 146.5s
+  >>> 保存最优模型（Val R²：0.7997，Val Loss：0.140539）
+Epoch [  1/150] | Train Loss: 0.083153 | Val Loss: 0.116269 | Train R²: 0.9322 | Val R²: 0.8331 | IK: 0.0439/0.1140 | Cont: 0.7660 | StyleSim: 0.515/0.758 | LR: 0.000996 | Time: 138.5s
+  >>> 保存最优模型（Val R²：0.8331，Val Loss：0.116269）
+Epoch [  2/150] | Train Loss: 0.073295 | Val Loss: 0.104015 | Train R²: 0.9368 | Val R²: 0.8502 | IK: 0.0408/0.1019 | Cont: 0.6326 | StyleSim: 0.509/0.753 | LR: 0.000991 | Time: 144.1s
+  >>> 保存最优模型（Val R²：0.8502，Val Loss：0.104015）
+Epoch [  3/150] | Train Loss: 0.065776 | Val Loss: 0.096074 | Train R²: 0.9408 | Val R²: 0.8611 | IK: 0.0380/0.0941 | Cont: 0.5389 | StyleSim: 0.501/0.745 | LR: 0.000984 | Time: 136.1s
+  >>> 保存最优模型（Val R²：0.8611，Val Loss：0.096074）
+Epoch [  4/150] | Train Loss: 0.059468 | Val Loss: 0.091876 | Train R²: 0.9472 | Val R²: 0.8668 | IK: 0.0335/0.0899 | Cont: 0.5046 | StyleSim: 0.514/0.753 | LR: 0.000976 | Time: 149.6s
+  >>> 保存最优模型（Val R²：0.8668，Val Loss：0.091876）
+Epoch [  5/150] | Train Loss: 0.055707 | Val Loss: 0.087266 | Train R²: 0.9503 | Val R²: 0.8733 | IK: 0.0314/0.0854 | Cont: 0.4725 | StyleSim: 0.518/0.752 | LR: 0.000965 | Time: 139.7s
+  >>> 保存最优模型（Val R²：0.8733，Val Loss：0.087266）
+Epoch [  6/150] | Train Loss: 0.053826 | Val Loss: 0.082512 | Train R²: 0.9510 | Val R²: 0.8797 | IK: 0.0308/0.0807 | Cont: 0.4468 | StyleSim: 0.511/0.752 | LR: 0.000952 | Time: 135.6s
+  >>> 保存最优模型（Val R²：0.8797，Val Loss：0.082512）
+Epoch [  7/150] | Train Loss: 0.051718 | Val Loss: 0.078121 | Train R²: 0.9524 | Val R²: 0.8858 | IK: 0.0298/0.0764 | Cont: 0.4254 | StyleSim: 0.506/0.742 | LR: 0.000938 | Time: 133.0s
+  >>> 保存最优模型（Val R²：0.8858，Val Loss：0.078121）
+Epoch [  8/150] | Train Loss: 0.050077 | Val Loss: 0.072618 | Train R²: 0.9535 | Val R²: 0.8934 | IK: 0.0290/0.0710 | Cont: 0.4084 | StyleSim: 0.503/0.743 | LR: 0.000922 | Time: 134.7s
+  >>> 保存最优模型（Val R²：0.8934，Val Loss：0.072618）
+Epoch [  9/150] | Train Loss: 0.048386 | Val Loss: 0.072797 | Train R²: 0.9551 | Val R²: 0.8930 | IK: 0.0278/0.0712 | Cont: 0.3979 | StyleSim: 0.500/0.746 | LR: 0.000905 | Time: 138.3s
+Epoch [ 10/150] | Train Loss: 0.046550 | Val Loss: 0.066609 | Train R²: 0.9576 | Val R²: 0.9018 | IK: 0.0261/0.0651 | Cont: 0.3957 | StyleSim: 0.511/0.740 | LR: 0.000885 | Time: 143.7s
+  >>> 保存最优模型（Val R²：0.9018，Val Loss：0.066609）
+Epoch [ 11/150] | Train Loss: 0.044907 | Val Loss: 0.070997 | Train R²: 0.9590 | Val R²: 0.8957 | IK: 0.0251/0.0694 | Cont: 0.3832 | StyleSim: 0.511/0.744 | LR: 0.000865 | Time: 136.8s
+Epoch [ 12/150] | Train Loss: 0.043635 | Val Loss: 0.067290 | Train R²: 0.9604 | Val R²: 0.9009 | IK: 0.0242/0.0658 | Cont: 0.3770 | StyleSim: 0.513/0.748 | LR: 0.000842 | Time: 142.4s
+Epoch [ 13/150] | Train Loss: 0.042823 | Val Loss: 0.063545 | Train R²: 0.9607 | Val R²: 0.9061 | IK: 0.0239/0.0621 | Cont: 0.3656 | StyleSim: 0.507/0.745 | LR: 0.000819 | Time: 139.9s
+  >>> 保存最优模型（Val R²：0.9061，Val Loss：0.063545）
+Epoch [ 14/150] | Train Loss: 0.041732 | Val Loss: 0.059637 | Train R²: 0.9614 | Val R²: 0.9111 | IK: 0.0234/0.0582 | Cont: 0.3543 | StyleSim: 0.505/0.732 | LR: 0.000794 | Time: 140.0s
+  >>> 保存最优模型（Val R²：0.9111，Val Loss：0.059637）
+Epoch [ 15/150] | Train Loss: 0.041208 | Val Loss: 0.058883 | Train R²: 0.9614 | Val R²: 0.9123 | IK: 0.0234/0.0575 | Cont: 0.3439 | StyleSim: 0.495/0.737 | LR: 0.000768 | Time: 136.3s
+  >>> 保存最优模型（Val R²：0.9123，Val Loss：0.058883）
+Epoch [ 16/150] | Train Loss: 0.039186 | Val Loss: 0.057197 | Train R²: 0.9642 | Val R²: 0.9146 | IK: 0.0216/0.0559 | Cont: 0.3415 | StyleSim: 0.509/0.742 | LR: 0.000741 | Time: 135.3s
+  >>> 保存最优模型（Val R²：0.9146，Val Loss：0.057197）
+Epoch [ 17/150] | Train Loss: 0.038901 | Val Loss: 0.054179 | Train R²: 0.9633 | Val R²: 0.9191 | IK: 0.0221/0.0529 | Cont: 0.3251 | StyleSim: 0.492/0.746 | LR: 0.000713 | Time: 136.0s
+  >>> 保存最优模型（Val R²：0.9191，Val Loss：0.054179）
+Epoch [ 18/150] | Train Loss: 0.036724 | Val Loss: 0.052510 | Train R²: 0.9666 | Val R²: 0.9212 | IK: 0.0199/0.0512 | Cont: 0.3258 | StyleSim: 0.514/0.741 | LR: 0.000684 | Time: 136.4s
+  >>> 保存最优模型（Val R²：0.9212，Val Loss：0.052510）
+Epoch [ 19/150] | Train Loss: 0.036191 | Val Loss: 0.050978 | Train R²: 0.9659 | Val R²: 0.9234 | IK: 0.0204/0.0497 | Cont: 0.3060 | StyleSim: 0.501/0.739 | LR: 0.000655 | Time: 138.6s
+  >>> 保存最优模型（Val R²：0.9234，Val Loss：0.050978）
+Epoch [ 20/150] | Train Loss: 0.034796 | Val Loss: 0.049933 | Train R²: 0.9675 | Val R²: 0.9249 | IK: 0.0193/0.0487 | Cont: 0.2999 | StyleSim: 0.507/0.735 | LR: 0.000625 | Time: 138.5s
+  >>> 保存最优模型（Val R²：0.9249，Val Loss：0.049933）
+Epoch [ 21/150] | Train Loss: 0.033902 | Val Loss: 0.047490 | Train R²: 0.9678 | Val R²: 0.9283 | IK: 0.0191/0.0463 | Cont: 0.2862 | StyleSim: 0.499/0.735 | LR: 0.000594 | Time: 142.3s
+  >>> 保存最优模型（Val R²：0.9283，Val Loss：0.047490）
+Epoch [ 22/150] | Train Loss: 0.032852 | Val Loss: 0.045937 | Train R²: 0.9691 | Val R²: 0.9305 | IK: 0.0182/0.0448 | Cont: 0.2842 | StyleSim: 0.506/0.732 | LR: 0.000563 | Time: 141.1s
+  >>> 保存最优模型（Val R²：0.9305，Val Loss：0.045937）
+Epoch [ 23/150] | Train Loss: 0.031995 | Val Loss: 0.045189 | Train R²: 0.9698 | Val R²: 0.9318 | IK: 0.0177/0.0441 | Cont: 0.2763 | StyleSim: 0.505/0.736 | LR: 0.000532 | Time: 136.3s
+  >>> 保存最优模型（Val R²：0.9318，Val Loss：0.045189）
+Epoch [ 24/150] | Train Loss: 0.031590 | Val Loss: 0.043438 | Train R²: 0.9694 | Val R²: 0.9339 | IK: 0.0179/0.0423 | Cont: 0.2632 | StyleSim: 0.491/0.736 | LR: 0.000501 | Time: 137.3s
+  >>> 保存最优模型（Val R²：0.9339，Val Loss：0.043438）
+Epoch [ 25/150] | Train Loss: 0.030466 | Val Loss: 0.041444 | Train R²: 0.9708 | Val R²: 0.9368 | IK: 0.0170/0.0404 | Cont: 0.2597 | StyleSim: 0.498/0.731 | LR: 0.000469 | Time: 141.2s
+  >>> 保存最优模型（Val R²：0.9368，Val Loss：0.041444）
+Epoch [ 26/150] | Train Loss: 0.029525 | Val Loss: 0.040751 | Train R²: 0.9721 | Val R²: 0.9379 | IK: 0.0162/0.0397 | Cont: 0.2586 | StyleSim: 0.506/0.731 | LR: 0.000438 | Time: 137.5s
+  >>> 保存最优模型（Val R²：0.9379，Val Loss：0.040751）
+Epoch [ 27/150] | Train Loss: 0.029041 | Val Loss: 0.038443 | Train R²: 0.9720 | Val R²: 0.9411 | IK: 0.0162/0.0374 | Cont: 0.2480 | StyleSim: 0.494/0.730 | LR: 0.000407 | Time: 137.2s
+  >>> 保存最优模型（Val R²：0.9411，Val Loss：0.038443）
+Epoch [ 28/150] | Train Loss: 0.028494 | Val Loss: 0.038108 | Train R²: 0.9723 | Val R²: 0.9415 | IK: 0.0160/0.0371 | Cont: 0.2412 | StyleSim: 0.488/0.731 | LR: 0.000376 | Time: 134.5s
+  >>> 保存最优模型（Val R²：0.9415，Val Loss：0.038108）
+Epoch [ 29/150] | Train Loss: 0.027414 | Val Loss: 0.036003 | Train R²: 0.9739 | Val R²: 0.9446 | IK: 0.0150/0.0350 | Cont: 0.2409 | StyleSim: 0.501/0.731 | LR: 0.000346 | Time: 140.6s
+  >>> 保存最优模型（Val R²：0.9446，Val Loss：0.036003）
+Epoch [ 30/150] | Train Loss: 0.026988 | Val Loss: 0.034939 | Train R²: 0.9741 | Val R²: 0.9461 | IK: 0.0148/0.0340 | Cont: 0.2347 | StyleSim: 0.495/0.732 | LR: 0.000317 | Time: 141.3s
+  >>> 保存最优模型（Val R²：0.9461，Val Loss：0.034939）
+Epoch [ 31/150] | Train Loss: 0.026362 | Val Loss: 0.034415 | Train R²: 0.9748 | Val R²: 0.9468 | IK: 0.0144/0.0335 | Cont: 0.2318 | StyleSim: 0.497/0.731 | LR: 0.000288 | Time: 137.7s
+  >>> 保存最优模型（Val R²：0.9468，Val Loss：0.034415）
+Epoch [ 32/150] | Train Loss: 0.025842 | Val Loss: 0.032649 | Train R²: 0.9750 | Val R²: 0.9494 | IK: 0.0142/0.0317 | Cont: 0.2247 | StyleSim: 0.491/0.729 | LR: 0.000260 | Time: 146.8s
+  >>> 保存最优模型（Val R²：0.9494，Val Loss：0.032649）
+Epoch [ 33/150] | Train Loss: 0.025098 | Val Loss: 0.031519 | Train R²: 0.9761 | Val R²: 0.9509 | IK: 0.0135/0.0306 | Cont: 0.2247 | StyleSim: 0.501/0.727 | LR: 0.000233 | Time: 139.7s
+  >>> 保存最优模型（Val R²：0.9509，Val Loss：0.031519）
+Epoch [ 34/150] | Train Loss: 0.024753 | Val Loss: 0.030879 | Train R²: 0.9763 | Val R²: 0.9518 | IK: 0.0134/0.0300 | Cont: 0.2200 | StyleSim: 0.496/0.727 | LR: 0.000207 | Time: 147.7s
+  >>> 保存最优模型（Val R²：0.9518，Val Loss：0.030879）
+Epoch [ 35/150] | Train Loss: 0.024177 | Val Loss: 0.030155 | Train R²: 0.9771 | Val R²: 0.9529 | IK: 0.0129/0.0293 | Cont: 0.2184 | StyleSim: 0.502/0.728 | LR: 0.000182 | Time: 141.0s
+  >>> 保存最优模型（Val R²：0.9529，Val Loss：0.030155）
+Epoch [ 36/150] | Train Loss: 0.023753 | Val Loss: 0.029655 | Train R²: 0.9775 | Val R²: 0.9536 | IK: 0.0126/0.0288 | Cont: 0.2162 | StyleSim: 0.503/0.728 | LR: 0.000159 | Time: 138.3s
+  >>> 保存最优模型（Val R²：0.9536，Val Loss：0.029655）
+Epoch [ 37/150] | Train Loss: 0.023414 | Val Loss: 0.029181 | Train R²: 0.9777 | Val R²: 0.9543 | IK: 0.0124/0.0284 | Cont: 0.2122 | StyleSim: 0.502/0.728 | LR: 0.000136 | Time: 141.3s
+  >>> 保存最优模型（Val R²：0.9543，Val Loss：0.029181）
+Epoch [ 38/150] | Train Loss: 0.023121 | Val Loss: 0.028415 | Train R²: 0.9779 | Val R²: 0.9554 | IK: 0.0123/0.0276 | Cont: 0.2088 | StyleSim: 0.499/0.728 | LR: 0.000116 | Time: 137.9s
+  >>> 保存最优模型（Val R²：0.9554，Val Loss：0.028415）
+Epoch [ 39/150] | Train Loss: 0.022768 | Val Loss: 0.028027 | Train R²: 0.9782 | Val R²: 0.9559 | IK: 0.0121/0.0272 | Cont: 0.2061 | StyleSim: 0.497/0.726 | LR: 0.000096 | Time: 141.3s
+  >>> 保存最优模型（Val R²：0.9559，Val Loss：0.028027）
+Epoch [ 40/150] | Train Loss: 0.022634 | Val Loss: 0.027087 | Train R²: 0.9781 | Val R²: 0.9572 | IK: 0.0122/0.0263 | Cont: 0.2015 | StyleSim: 0.490/0.723 | LR: 0.000079 | Time: 138.5s
+  >>> 保存最优模型（Val R²：0.9572，Val Loss：0.027087）
+Epoch [ 41/150] | Train Loss: 0.022386 | Val Loss: 0.026811 | Train R²: 0.9783 | Val R²: 0.9576 | IK: 0.0121/0.0260 | Cont: 0.1994 | StyleSim: 0.490/0.725 | LR: 0.000063 | Time: 136.1s
+  >>> 保存最优模型（Val R²：0.9576，Val Loss：0.026811）
+Epoch [ 42/150] | Train Loss: 0.022046 | Val Loss: 0.026495 | Train R²: 0.9790 | Val R²: 0.9581 | IK: 0.0116/0.0257 | Cont: 0.2017 | StyleSim: 0.499/0.723 | LR: 0.000049 | Time: 136.4s
+  >>> 保存最优模型（Val R²：0.9581，Val Loss：0.026495）
+Epoch [ 43/150] | Train Loss: 0.022016 | Val Loss: 0.026149 | Train R²: 0.9785 | Val R²: 0.9586 | IK: 0.0119/0.0254 | Cont: 0.1955 | StyleSim: 0.487/0.724 | LR: 0.000036 | Time: 136.8s
+  >>> 保存最优模型（Val R²：0.9586，Val Loss：0.026149）
+Epoch [ 44/150] | Train Loss: 0.021943 | Val Loss: 0.026024 | Train R²: 0.9784 | Val R²: 0.9588 | IK: 0.0120/0.0253 | Cont: 0.1921 | StyleSim: 0.481/0.723 | LR: 0.000025 | Time: 138.4s
+  >>> 保存最优模型（Val R²：0.9588，Val Loss：0.026024）
+Epoch [ 45/150] | Train Loss: 0.021610 | Val Loss: 0.025804 | Train R²: 0.9795 | Val R²: 0.9591 | IK: 0.0113/0.0251 | Cont: 0.1992 | StyleSim: 0.502/0.724 | LR: 0.000017 | Time: 144.8s
+  >>> 保存最优模型（Val R²：0.9591，Val Loss：0.025804）
+Epoch [ 46/150] | Train Loss: 0.021667 | Val Loss: 0.025678 | Train R²: 0.9789 | Val R²: 0.9593 | IK: 0.0117/0.0249 | Cont: 0.1933 | StyleSim: 0.488/0.724 | LR: 0.000010 | Time: 144.8s
+  >>> 保存最优模型（Val R²：0.9593，Val Loss：0.025678）
+Epoch [ 47/150] | Train Loss: 0.021518 | Val Loss: 0.025537 | Train R²: 0.9791 | Val R²: 0.9595 | IK: 0.0115/0.0248 | Cont: 0.1936 | StyleSim: 0.490/0.723 | LR: 0.000005 | Time: 141.4s
+  >>> 保存最优模型（Val R²：0.9595，Val Loss：0.025537）
+Epoch [ 48/150] | Train Loss: 0.021450 | Val Loss: 0.025521 | Train R²: 0.9794 | Val R²: 0.9595 | IK: 0.0114/0.0248 | Cont: 0.1953 | StyleSim: 0.495/0.723 | LR: 0.000002 | Time: 138.4s
+  >>> 保存最优模型（Val R²：0.9595，Val Loss：0.025521）
+Epoch [ 49/150] | Train Loss: 0.021325 | Val Loss: 0.025491 | Train R²: 0.9797 | Val R²: 0.9595 | IK: 0.0112/0.0247 | Cont: 0.1968 | StyleSim: 0.500/0.723 | LR: 0.001000 | Time: 144.4s
+  >>> 保存最优模型（Val R²：0.9595，Val Loss：0.025491）
+Epoch [ 50/150] | Train Loss: 0.038728 | Val Loss: 0.047792 | Train R²: 0.9636 | Val R²: 0.9278 | IK: 0.0218/0.0466 | Cont: 0.3269 | StyleSim: 0.490/0.735 | LR: 0.001000 | Time: 139.5s
+Epoch [ 51/150] | Train Loss: 0.035212 | Val Loss: 0.051055 | Train R²: 0.9667 | Val R²: 0.9231 | IK: 0.0197/0.0498 | Cont: 0.2993 | StyleSim: 0.501/0.734 | LR: 0.000999 | Time: 141.2s

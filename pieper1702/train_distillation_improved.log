@@ -1,0 +1,866 @@
+======================================================================
+知识蒸馏训练：原始模型 → 改进简化模型
+======================================================================
+  温度: 2.0, alpha: 0.3
+  FK weight: 0.2
+加载数据: /data0/wwb_data/ygx_data/data_ygx_pose+dof/ACCAD_CMU_merged_training_data.npz
+  预加载到GPU...
+  ✓ 数据已预加载到GPU
+  训练集: 3253229
+  验证集: 361470
+  加载时间: 4.56s
+
+加载教师模型...
+  ✓ 教师: 3.39M 参数
+
+创建学生模型（改进简化版）...
+  ✓ 学生: 4.42M 参数
+  压缩比: 0.77x
+
+✓ GPU FK 加载成功
+
+开始蒸馏训练...
+  batches/epoch: 1589
+
+Epoch [0/100] | LR: 0.000040
+  Progress: 6.3% | Loss: 0.550444 | Hard: 0.5954 | Soft: 0.3826
+  Progress: 12.6% | Loss: 0.023552 | Hard: 0.0232 | Soft: 0.0224
+  Progress: 18.9% | Loss: 0.083116 | Hard: 0.0868 | Soft: 0.0629
+  Progress: 25.2% | Loss: 0.038479 | Hard: 0.0357 | Soft: 0.0359
+  Progress: 31.5% | Loss: 0.221526 | Hard: 0.2116 | Soft: 0.2149
+  Progress: 37.8% | Loss: 0.107724 | Hard: 0.1037 | Soft: 0.0977
+  Progress: 44.1% | Loss: 0.011143 | Hard: 0.0109 | Soft: 0.0109
+  Progress: 50.3% | Loss: 0.012474 | Hard: 0.0122 | Soft: 0.0122
+  Progress: 56.6% | Loss: 0.340044 | Hard: 0.3561 | Soft: 0.2740
+  Progress: 62.9% | Loss: 0.046016 | Hard: 0.0431 | Soft: 0.0433
+  Progress: 69.2% | Loss: 0.002662 | Hard: 0.0024 | Soft: 0.0025
+  Progress: 75.5% | Loss: 0.006622 | Hard: 0.0065 | Soft: 0.0063
+  Progress: 81.8% | Loss: 0.071846 | Hard: 0.0694 | Soft: 0.0696
+  Progress: 88.1% | Loss: 0.041320 | Hard: 0.0423 | Soft: 0.0307
+  Progress: 94.4% | Loss: 0.052985 | Hard: 0.0513 | Soft: 0.0482
+
+============================================================
+Epoch [0/100] | Time: 79.3s
+  Train Loss: 0.117424
+  Hard Loss: 0.117785 (vs 真实标签)
+  Soft Loss: 0.102173 (vs 教师)
+  FK Loss: 0.021614
+  Val MAE: 0.243505 | Val MSE: 0.197138
+============================================================
+  >>> 保存最优模型 (val_mae: 0.243505)
+
+Epoch [1/100] | LR: 0.000080
+  Progress: 6.3% | Loss: 0.537143 | Hard: 0.5719 | Soft: 0.4167
+  Progress: 12.6% | Loss: 0.018783 | Hard: 0.0186 | Soft: 0.0183
+  Progress: 18.9% | Loss: 0.056404 | Hard: 0.0583 | Soft: 0.0426
+  Progress: 25.2% | Loss: 0.018181 | Hard: 0.0176 | Soft: 0.0175
+  Progress: 31.5% | Loss: 0.125839 | Hard: 0.1194 | Soft: 0.1197
+  Progress: 37.8% | Loss: 0.051019 | Hard: 0.0487 | Soft: 0.0509
+  Progress: 44.1% | Loss: 0.013017 | Hard: 0.0128 | Soft: 0.0126
+  Progress: 50.3% | Loss: 0.008870 | Hard: 0.0085 | Soft: 0.0087
+  Progress: 56.6% | Loss: 0.329710 | Hard: 0.3422 | Soft: 0.2736
+  Progress: 62.9% | Loss: 0.045641 | Hard: 0.0429 | Soft: 0.0420
+  Progress: 69.2% | Loss: 0.002294 | Hard: 0.0021 | Soft: 0.0021
+  Progress: 75.5% | Loss: 0.006357 | Hard: 0.0063 | Soft: 0.0061
+  Progress: 81.8% | Loss: 0.071787 | Hard: 0.0695 | Soft: 0.0699
+  Progress: 88.1% | Loss: 0.035776 | Hard: 0.0366 | Soft: 0.0270
+  Progress: 94.4% | Loss: 0.040370 | Hard: 0.0395 | Soft: 0.0380
+
+============================================================
+Epoch [1/100] | Time: 78.9s
+  Train Loss: 0.099591
+  Hard Loss: 0.099961 (vs 真实标签)
+  Soft Loss: 0.086964 (vs 教师)
+  FK Loss: 0.017648
+  Val MAE: 0.241847 | Val MSE: 0.198769
+============================================================
+  >>> 保存最优模型 (val_mae: 0.241847)
+
+Epoch [2/100] | LR: 0.000120
+  Progress: 6.3% | Loss: 0.515459 | Hard: 0.5477 | Soft: 0.3969
+  Progress: 12.6% | Loss: 0.016677 | Hard: 0.0165 | Soft: 0.0162
+  Progress: 18.9% | Loss: 0.052643 | Hard: 0.0549 | Soft: 0.0381
+  Progress: 25.2% | Loss: 0.020522 | Hard: 0.0199 | Soft: 0.0197
+  Progress: 31.5% | Loss: 0.113919 | Hard: 0.1077 | Soft: 0.1081
+  Progress: 37.8% | Loss: 0.053830 | Hard: 0.0519 | Soft: 0.0529
+  Progress: 44.1% | Loss: 0.012600 | Hard: 0.0123 | Soft: 0.0121
+  Progress: 50.3% | Loss: 0.007364 | Hard: 0.0071 | Soft: 0.0072
+  Progress: 56.6% | Loss: 0.329166 | Hard: 0.3421 | Soft: 0.2716
+  Progress: 62.9% | Loss: 0.043639 | Hard: 0.0411 | Soft: 0.0401
+  Progress: 69.2% | Loss: 0.003079 | Hard: 0.0029 | Soft: 0.0029
+  Progress: 75.5% | Loss: 0.004346 | Hard: 0.0043 | Soft: 0.0042
+  Progress: 81.8% | Loss: 0.071278 | Hard: 0.0691 | Soft: 0.0694
+  Progress: 88.1% | Loss: 0.033982 | Hard: 0.0345 | Soft: 0.0261
+  Progress: 94.4% | Loss: 0.036676 | Hard: 0.0361 | Soft: 0.0349
+
+============================================================
+Epoch [2/100] | Time: 78.9s
+  Train Loss: 0.097246
+  Hard Loss: 0.097653 (vs 真实标签)
+  Soft Loss: 0.084711 (vs 教师)
+  FK Loss: 0.017380
+  Val MAE: 0.241444 | Val MSE: 0.199201
+============================================================
+  >>> 保存最优模型 (val_mae: 0.241444)
+
+Epoch [3/100] | LR: 0.000160
+  Progress: 6.3% | Loss: 0.499653 | Hard: 0.5329 | Soft: 0.3772
+  Progress: 12.6% | Loss: 0.017510 | Hard: 0.0173 | Soft: 0.0170
+  Progress: 18.9% | Loss: 0.050149 | Hard: 0.0537 | Soft: 0.0334
+  Progress: 25.2% | Loss: 0.022550 | Hard: 0.0220 | Soft: 0.0220
+  Progress: 31.5% | Loss: 0.086619 | Hard: 0.0820 | Soft: 0.0825
+  Progress: 37.8% | Loss: 0.052464 | Hard: 0.0513 | Soft: 0.0500
+  Progress: 44.1% | Loss: 0.011578 | Hard: 0.0112 | Soft: 0.0111
+  Progress: 50.3% | Loss: 0.007371 | Hard: 0.0071 | Soft: 0.0072
+  Progress: 56.6% | Loss: 0.338540 | Hard: 0.3534 | Soft: 0.2783
+  Progress: 62.9% | Loss: 0.043266 | Hard: 0.0406 | Soft: 0.0400
+  Progress: 69.2% | Loss: 0.003109 | Hard: 0.0030 | Soft: 0.0029
+  Progress: 75.5% | Loss: 0.003409 | Hard: 0.0034 | Soft: 0.0032
+  Progress: 81.8% | Loss: 0.066269 | Hard: 0.0641 | Soft: 0.0642
+  Progress: 88.1% | Loss: 0.034050 | Hard: 0.0346 | Soft: 0.0266
+  Progress: 94.4% | Loss: 0.033664 | Hard: 0.0332 | Soft: 0.0316
+
+============================================================
+Epoch [3/100] | Time: 79.4s
+  Train Loss: 0.095389
+  Hard Loss: 0.095812 (vs 真实标签)
+  Soft Loss: 0.082893 (vs 教师)
+  FK Loss: 0.017261
+  Val MAE: 0.236104 | Val MSE: 0.196225
+============================================================
+  >>> 保存最优模型 (val_mae: 0.236104)
+
+Epoch [4/100] | LR: 0.000200
+  Progress: 6.3% | Loss: 0.502651 | Hard: 0.5376 | Soft: 0.3763
+  Progress: 12.6% | Loss: 0.017424 | Hard: 0.0172 | Soft: 0.0168
+  Progress: 18.9% | Loss: 0.044786 | Hard: 0.0484 | Soft: 0.0289
+  Progress: 25.2% | Loss: 0.020278 | Hard: 0.0198 | Soft: 0.0197
+  Progress: 31.5% | Loss: 0.100300 | Hard: 0.0953 | Soft: 0.0966
+  Progress: 37.8% | Loss: 0.052226 | Hard: 0.0517 | Soft: 0.0477
+  Progress: 44.1% | Loss: 0.010128 | Hard: 0.0099 | Soft: 0.0097
+  Progress: 50.3% | Loss: 0.006160 | Hard: 0.0059 | Soft: 0.0060
+  Progress: 56.6% | Loss: 0.337190 | Hard: 0.3524 | Soft: 0.2765
+  Progress: 62.9% | Loss: 0.051493 | Hard: 0.0485 | Soft: 0.0479
+  Progress: 69.2% | Loss: 0.002465 | Hard: 0.0024 | Soft: 0.0023
+  Progress: 75.5% | Loss: 0.005334 | Hard: 0.0052 | Soft: 0.0051
+  Progress: 81.8% | Loss: 0.071166 | Hard: 0.0689 | Soft: 0.0693
+  Progress: 88.1% | Loss: 0.033185 | Hard: 0.0337 | Soft: 0.0258
+  Progress: 94.4% | Loss: 0.039389 | Hard: 0.0388 | Soft: 0.0372
+
+============================================================
+Epoch [4/100] | Time: 79.4s
+  Train Loss: 0.095368
+  Hard Loss: 0.095768 (vs 真实标签)
+  Soft Loss: 0.082816 (vs 教师)
+  FK Loss: 0.017428
+  Val MAE: 0.238876 | Val MSE: 0.197135
+============================================================
+  无改善 (1/15)
+
+Epoch [5/100] | LR: 0.000200
+  Progress: 6.3% | Loss: 0.485584 | Hard: 0.5205 | Soft: 0.3614
+  Progress: 12.6% | Loss: 0.021003 | Hard: 0.0205 | Soft: 0.0201
+  Progress: 18.9% | Loss: 0.038976 | Hard: 0.0428 | Soft: 0.0235
+  Progress: 25.2% | Loss: 0.019610 | Hard: 0.0191 | Soft: 0.0189
+  Progress: 31.5% | Loss: 0.061930 | Hard: 0.0595 | Soft: 0.0593
+  Progress: 37.8% | Loss: 0.037739 | Hard: 0.0373 | Soft: 0.0349
+  Progress: 44.1% | Loss: 0.010072 | Hard: 0.0098 | Soft: 0.0096
+  Progress: 50.3% | Loss: 0.005550 | Hard: 0.0054 | Soft: 0.0055
+  Progress: 56.6% | Loss: 0.315558 | Hard: 0.3313 | Soft: 0.2512
+  Progress: 62.9% | Loss: 0.048704 | Hard: 0.0454 | Soft: 0.0458
+  Progress: 69.2% | Loss: 0.003128 | Hard: 0.0029 | Soft: 0.0029
+  Progress: 75.5% | Loss: 0.004361 | Hard: 0.0042 | Soft: 0.0040
+  Progress: 81.8% | Loss: 0.065674 | Hard: 0.0634 | Soft: 0.0645
+  Progress: 88.1% | Loss: 0.032771 | Hard: 0.0336 | Soft: 0.0248
+  Progress: 94.4% | Loss: 0.037503 | Hard: 0.0366 | Soft: 0.0351
+
+============================================================
+Epoch [5/100] | Time: 78.5s
+  Train Loss: 0.091707
+  Hard Loss: 0.092213 (vs 真实标签)
+  Soft Loss: 0.079374 (vs 教师)
+  FK Loss: 0.016728
+  Val MAE: 0.225486 | Val MSE: 0.191269
+============================================================
+  >>> 保存最优模型 (val_mae: 0.225486)
+
+Epoch [6/100] | LR: 0.000200
+  Progress: 6.3% | Loss: 0.476688 | Hard: 0.5129 | Soft: 0.3484
+  Progress: 12.6% | Loss: 0.019074 | Hard: 0.0188 | Soft: 0.0184
+  Progress: 18.9% | Loss: 0.034897 | Hard: 0.0382 | Soft: 0.0209
+  Progress: 25.2% | Loss: 0.021584 | Hard: 0.0210 | Soft: 0.0209
+  Progress: 31.5% | Loss: 0.047334 | Hard: 0.0457 | Soft: 0.0459
+  Progress: 37.8% | Loss: 0.036574 | Hard: 0.0360 | Soft: 0.0340
+  Progress: 44.1% | Loss: 0.009418 | Hard: 0.0092 | Soft: 0.0091
+  Progress: 50.3% | Loss: 0.005187 | Hard: 0.0050 | Soft: 0.0052
+  Progress: 56.6% | Loss: 0.317084 | Hard: 0.3331 | Soft: 0.2541
+  Progress: 62.9% | Loss: 0.049626 | Hard: 0.0462 | Soft: 0.0472
+  Progress: 69.2% | Loss: 0.003219 | Hard: 0.0030 | Soft: 0.0030
+  Progress: 75.5% | Loss: 0.003072 | Hard: 0.0030 | Soft: 0.0029
+  Progress: 81.8% | Loss: 0.058004 | Hard: 0.0560 | Soft: 0.0568
+  Progress: 88.1% | Loss: 0.031174 | Hard: 0.0323 | Soft: 0.0226
+  Progress: 94.4% | Loss: 0.039151 | Hard: 0.0380 | Soft: 0.0366
+
+============================================================
+Epoch [6/100] | Time: 79.3s
+  Train Loss: 0.089726
+  Hard Loss: 0.090303 (vs 真实标签)
+  Soft Loss: 0.077600 (vs 教师)
+  FK Loss: 0.016172
+  Val MAE: 0.223442 | Val MSE: 0.192373
+============================================================
+  >>> 保存最优模型 (val_mae: 0.223442)
+
+Epoch [7/100] | LR: 0.000200
+  Progress: 6.3% | Loss: 0.462886 | Hard: 0.4977 | Soft: 0.3387
+  Progress: 12.6% | Loss: 0.019241 | Hard: 0.0190 | Soft: 0.0186
+  Progress: 18.9% | Loss: 0.034302 | Hard: 0.0378 | Soft: 0.0203
+  Progress: 25.2% | Loss: 0.015596 | Hard: 0.0151 | Soft: 0.0150
+  Progress: 31.5% | Loss: 0.061967 | Hard: 0.0591 | Soft: 0.0598
+  Progress: 37.8% | Loss: 0.038075 | Hard: 0.0364 | Soft: 0.0386
+  Progress: 44.1% | Loss: 0.010099 | Hard: 0.0099 | Soft: 0.0097
+  Progress: 50.3% | Loss: 0.005120 | Hard: 0.0049 | Soft: 0.0051
+  Progress: 56.6% | Loss: 0.316521 | Hard: 0.3318 | Soft: 0.2548
+  Progress: 62.9% | Loss: 0.053450 | Hard: 0.0502 | Soft: 0.0507
+  Progress: 69.2% | Loss: 0.003049 | Hard: 0.0029 | Soft: 0.0028
+  Progress: 75.5% | Loss: 0.003820 | Hard: 0.0036 | Soft: 0.0035
+  Progress: 81.8% | Loss: 0.055740 | Hard: 0.0538 | Soft: 0.0546
+  Progress: 88.1% | Loss: 0.030056 | Hard: 0.0309 | Soft: 0.0222
+  Progress: 94.4% | Loss: 0.035831 | Hard: 0.0350 | Soft: 0.0333
+
+============================================================
+Epoch [7/100] | Time: 77.4s
+  Train Loss: 0.088028
+  Hard Loss: 0.088589 (vs 真实标签)
+  Soft Loss: 0.076180 (vs 教师)
+  FK Loss: 0.015807
+  Val MAE: 0.223568 | Val MSE: 0.192734
+============================================================
+  无改善 (1/15)
+
+Epoch [8/100] | LR: 0.000200
+  Progress: 6.3% | Loss: 0.459606 | Hard: 0.4945 | Soft: 0.3365
+  Progress: 12.6% | Loss: 0.020449 | Hard: 0.0203 | Soft: 0.0198
+  Progress: 18.9% | Loss: 0.033125 | Hard: 0.0366 | Soft: 0.0190
+  Progress: 25.2% | Loss: 0.013931 | Hard: 0.0135 | Soft: 0.0134
+  Progress: 31.5% | Loss: 0.051700 | Hard: 0.0493 | Soft: 0.0496
+  Progress: 37.8% | Loss: 0.036708 | Hard: 0.0345 | Soft: 0.0383
+  Progress: 44.1% | Loss: 0.009512 | Hard: 0.0093 | Soft: 0.0090
+  Progress: 50.3% | Loss: 0.004865 | Hard: 0.0047 | Soft: 0.0049
+  Progress: 56.6% | Loss: 0.320194 | Hard: 0.3363 | Soft: 0.2547
+  Progress: 62.9% | Loss: 0.042822 | Hard: 0.0398 | Soft: 0.0405
+  Progress: 69.2% | Loss: 0.003120 | Hard: 0.0030 | Soft: 0.0030
+  Progress: 75.5% | Loss: 0.002442 | Hard: 0.0024 | Soft: 0.0023
+  Progress: 81.8% | Loss: 0.053405 | Hard: 0.0514 | Soft: 0.0520
+  Progress: 88.1% | Loss: 0.028335 | Hard: 0.0292 | Soft: 0.0205
+  Progress: 94.4% | Loss: 0.039289 | Hard: 0.0383 | Soft: 0.0363
+
+============================================================
+Epoch [8/100] | Time: 77.6s
+  Train Loss: 0.087300
+  Hard Loss: 0.087861 (vs 真实标签)
+  Soft Loss: 0.075597 (vs 教师)
+  FK Loss: 0.015593
+  Val MAE: 0.223177 | Val MSE: 0.194976
+============================================================
+  >>> 保存最优模型 (val_mae: 0.223177)
+
+Epoch [9/100] | LR: 0.000199
+  Progress: 6.3% | Loss: 0.456787 | Hard: 0.4907 | Soft: 0.3370
+  Progress: 12.6% | Loss: 0.022339 | Hard: 0.0221 | Soft: 0.0217
+  Progress: 18.9% | Loss: 0.029511 | Hard: 0.0331 | Soft: 0.0158
+  Progress: 25.2% | Loss: 0.013509 | Hard: 0.0130 | Soft: 0.0129
+  Progress: 31.5% | Loss: 0.046303 | Hard: 0.0441 | Soft: 0.0448
+  Progress: 37.8% | Loss: 0.034611 | Hard: 0.0323 | Soft: 0.0362
+  Progress: 44.1% | Loss: 0.009467 | Hard: 0.0093 | Soft: 0.0090
+  Progress: 50.3% | Loss: 0.004895 | Hard: 0.0047 | Soft: 0.0049
+  Progress: 56.6% | Loss: 0.315746 | Hard: 0.3307 | Soft: 0.2547
+  Progress: 62.9% | Loss: 0.043316 | Hard: 0.0405 | Soft: 0.0405
+  Progress: 69.2% | Loss: 0.003039 | Hard: 0.0029 | Soft: 0.0029
+  Progress: 75.5% | Loss: 0.002554 | Hard: 0.0025 | Soft: 0.0024
+  Progress: 81.8% | Loss: 0.052120 | Hard: 0.0502 | Soft: 0.0507
+  Progress: 88.1% | Loss: 0.027392 | Hard: 0.0281 | Soft: 0.0203
+  Progress: 94.4% | Loss: 0.036229 | Hard: 0.0351 | Soft: 0.0333
+
+============================================================
+Epoch [9/100] | Time: 78.6s
+  Train Loss: 0.086031
+  Hard Loss: 0.086598 (vs 真实标签)
+  Soft Loss: 0.074436 (vs 教师)
+  FK Loss: 0.015408
+  Val MAE: 0.223567 | Val MSE: 0.195934
+============================================================
+  无改善 (1/15)
+
+Epoch [10/100] | LR: 0.000199
+  Progress: 6.3% | Loss: 0.450975 | Hard: 0.4846 | Soft: 0.3308
+  Progress: 12.6% | Loss: 0.023176 | Hard: 0.0229 | Soft: 0.0225
+  Progress: 18.9% | Loss: 0.029185 | Hard: 0.0325 | Soft: 0.0164
+  Progress: 25.2% | Loss: 0.011308 | Hard: 0.0108 | Soft: 0.0107
+  Progress: 31.5% | Loss: 0.045693 | Hard: 0.0436 | Soft: 0.0439
+  Progress: 37.8% | Loss: 0.038768 | Hard: 0.0361 | Soft: 0.0410
+  Progress: 44.1% | Loss: 0.010104 | Hard: 0.0100 | Soft: 0.0096
+  Progress: 50.3% | Loss: 0.004789 | Hard: 0.0046 | Soft: 0.0048
+  Progress: 56.6% | Loss: 0.318298 | Hard: 0.3329 | Soft: 0.2582
+  Progress: 62.9% | Loss: 0.040546 | Hard: 0.0379 | Soft: 0.0385
+  Progress: 69.2% | Loss: 0.002506 | Hard: 0.0024 | Soft: 0.0024
+  Progress: 75.5% | Loss: 0.002411 | Hard: 0.0023 | Soft: 0.0022
+  Progress: 81.8% | Loss: 0.054105 | Hard: 0.0521 | Soft: 0.0526
+  Progress: 88.1% | Loss: 0.025100 | Hard: 0.0255 | Soft: 0.0193
+  Progress: 94.4% | Loss: 0.038363 | Hard: 0.0370 | Soft: 0.0351
+
+============================================================
+Epoch [10/100] | Time: 78.4s
+  Train Loss: 0.085254
+  Hard Loss: 0.085829 (vs 真实标签)
+  Soft Loss: 0.073812 (vs 教师)
+  FK Loss: 0.015154
+  Val MAE: 0.223896 | Val MSE: 0.196645
+============================================================
+  无改善 (2/15)
+
+Epoch [11/100] | LR: 0.000198
+  Progress: 6.3% | Loss: 0.448937 | Hard: 0.4828 | Soft: 0.3288
+  Progress: 12.6% | Loss: 0.024863 | Hard: 0.0247 | Soft: 0.0242
+  Progress: 18.9% | Loss: 0.028710 | Hard: 0.0320 | Soft: 0.0161
+  Progress: 25.2% | Loss: 0.010467 | Hard: 0.0100 | Soft: 0.0099
+  Progress: 31.5% | Loss: 0.041373 | Hard: 0.0394 | Soft: 0.0395
+  Progress: 37.8% | Loss: 0.035166 | Hard: 0.0329 | Soft: 0.0366
+  Progress: 44.1% | Loss: 0.009833 | Hard: 0.0097 | Soft: 0.0094
+  Progress: 50.3% | Loss: 0.004489 | Hard: 0.0043 | Soft: 0.0045
+  Progress: 56.6% | Loss: 0.313566 | Hard: 0.3285 | Soft: 0.2533
+  Progress: 62.9% | Loss: 0.037509 | Hard: 0.0350 | Soft: 0.0351
+  Progress: 69.2% | Loss: 0.002831 | Hard: 0.0027 | Soft: 0.0027
+  Progress: 75.5% | Loss: 0.002959 | Hard: 0.0029 | Soft: 0.0028
+  Progress: 81.8% | Loss: 0.050669 | Hard: 0.0488 | Soft: 0.0489
+  Progress: 88.1% | Loss: 0.024593 | Hard: 0.0248 | Soft: 0.0194
+  Progress: 94.4% | Loss: 0.037266 | Hard: 0.0357 | Soft: 0.0343
+
+============================================================
+Epoch [11/100] | Time: 78.6s
+  Train Loss: 0.084712
+  Hard Loss: 0.085290 (vs 真实标签)
+  Soft Loss: 0.073292 (vs 教师)
+  FK Loss: 0.015109
+  Val MAE: 0.221329 | Val MSE: 0.196586
+============================================================
+  >>> 保存最优模型 (val_mae: 0.221329)
+
+Epoch [12/100] | LR: 0.000197
+  Progress: 6.3% | Loss: 0.449555 | Hard: 0.4834 | Soft: 0.3293
+  Progress: 12.6% | Loss: 0.022290 | Hard: 0.0220 | Soft: 0.0217
+  Progress: 18.9% | Loss: 0.027290 | Hard: 0.0304 | Soft: 0.0153
+  Progress: 25.2% | Loss: 0.010099 | Hard: 0.0096 | Soft: 0.0095
+  Progress: 31.5% | Loss: 0.041426 | Hard: 0.0394 | Soft: 0.0395
+  Progress: 37.8% | Loss: 0.037093 | Hard: 0.0346 | Soft: 0.0388
+  Progress: 44.1% | Loss: 0.009693 | Hard: 0.0095 | Soft: 0.0092
+  Progress: 50.3% | Loss: 0.004419 | Hard: 0.0042 | Soft: 0.0044
+  Progress: 56.6% | Loss: 0.310990 | Hard: 0.3254 | Soft: 0.2524
+  Progress: 62.9% | Loss: 0.041371 | Hard: 0.0386 | Soft: 0.0392
+  Progress: 69.2% | Loss: 0.002468 | Hard: 0.0023 | Soft: 0.0024
+  Progress: 75.5% | Loss: 0.002793 | Hard: 0.0027 | Soft: 0.0026
+  Progress: 81.8% | Loss: 0.052570 | Hard: 0.0506 | Soft: 0.0508
+  Progress: 88.1% | Loss: 0.022477 | Hard: 0.0222 | Soft: 0.0189
+  Progress: 94.4% | Loss: 0.037696 | Hard: 0.0361 | Soft: 0.0342
+
+============================================================
+Epoch [12/100] | Time: 80.0s
+  Train Loss: 0.083977
+  Hard Loss: 0.084546 (vs 真实标签)
+  Soft Loss: 0.072748 (vs 教师)
+  FK Loss: 0.014852
+  Val MAE: 0.221227 | Val MSE: 0.196625
+============================================================
+  >>> 保存最优模型 (val_mae: 0.221227)
+
+Epoch [13/100] | LR: 0.000197
+  Progress: 6.3% | Loss: 0.448316 | Hard: 0.4824 | Soft: 0.3276
+  Progress: 12.6% | Loss: 0.022256 | Hard: 0.0220 | Soft: 0.0216
+  Progress: 18.9% | Loss: 0.029361 | Hard: 0.0328 | Soft: 0.0164
+  Progress: 25.2% | Loss: 0.009051 | Hard: 0.0086 | Soft: 0.0086
+  Progress: 31.5% | Loss: 0.037510 | Hard: 0.0357 | Soft: 0.0357
+  Progress: 37.8% | Loss: 0.037287 | Hard: 0.0349 | Soft: 0.0387
+  Progress: 44.1% | Loss: 0.009606 | Hard: 0.0094 | Soft: 0.0091
+  Progress: 50.3% | Loss: 0.004269 | Hard: 0.0041 | Soft: 0.0042
+  Progress: 56.6% | Loss: 0.312162 | Hard: 0.3268 | Soft: 0.2527
+  Progress: 62.9% | Loss: 0.037481 | Hard: 0.0348 | Soft: 0.0357
+  Progress: 69.2% | Loss: 0.002220 | Hard: 0.0021 | Soft: 0.0021
+  Progress: 75.5% | Loss: 0.002769 | Hard: 0.0027 | Soft: 0.0026
+  Progress: 81.8% | Loss: 0.052195 | Hard: 0.0502 | Soft: 0.0504
+  Progress: 88.1% | Loss: 0.023177 | Hard: 0.0229 | Soft: 0.0192
+  Progress: 94.4% | Loss: 0.036851 | Hard: 0.0354 | Soft: 0.0333
+
+============================================================
+Epoch [13/100] | Time: 78.7s
+  Train Loss: 0.083640
+  Hard Loss: 0.084214 (vs 真实标签)
+  Soft Loss: 0.072390 (vs 教师)
+  FK Loss: 0.014866
+  Val MAE: 0.218848 | Val MSE: 0.196334
+============================================================
+  >>> 保存最优模型 (val_mae: 0.218848)
+
+Epoch [14/100] | LR: 0.000196
+  Progress: 6.3% | Loss: 0.451111 | Hard: 0.4854 | Soft: 0.3293
+  Progress: 12.6% | Loss: 0.021449 | Hard: 0.0213 | Soft: 0.0209
+  Progress: 18.9% | Loss: 0.033959 | Hard: 0.0371 | Soft: 0.0210
+  Progress: 25.2% | Loss: 0.009065 | Hard: 0.0086 | Soft: 0.0086
+  Progress: 31.5% | Loss: 0.039100 | Hard: 0.0372 | Soft: 0.0371
+  Progress: 37.8% | Loss: 0.036042 | Hard: 0.0338 | Soft: 0.0374
+  Progress: 44.1% | Loss: 0.009645 | Hard: 0.0095 | Soft: 0.0092
+  Progress: 50.3% | Loss: 0.004222 | Hard: 0.0040 | Soft: 0.0042
+  Progress: 56.6% | Loss: 0.309102 | Hard: 0.3237 | Soft: 0.2499
+  Progress: 62.9% | Loss: 0.037079 | Hard: 0.0345 | Soft: 0.0354
+  Progress: 69.2% | Loss: 0.002008 | Hard: 0.0019 | Soft: 0.0019
+  Progress: 75.5% | Loss: 0.002425 | Hard: 0.0024 | Soft: 0.0023
+  Progress: 81.8% | Loss: 0.049655 | Hard: 0.0478 | Soft: 0.0477
+  Progress: 88.1% | Loss: 0.023199 | Hard: 0.0228 | Soft: 0.0195
+  Progress: 94.4% | Loss: 0.034931 | Hard: 0.0337 | Soft: 0.0311
+
+============================================================
+Epoch [14/100] | Time: 79.3s
+  Train Loss: 0.082584
+  Hard Loss: 0.083145 (vs 真实标签)
+  Soft Loss: 0.071412 (vs 教师)
+  FK Loss: 0.014794
+  Val MAE: 0.217293 | Val MSE: 0.196125
+============================================================
+  >>> 保存最优模型 (val_mae: 0.217293)
+
+Epoch [15/100] | LR: 0.000195
+  Progress: 6.3% | Loss: 0.444962 | Hard: 0.4780 | Soft: 0.3263
+  Progress: 12.6% | Loss: 0.021011 | Hard: 0.0208 | Soft: 0.0205
+  Progress: 18.9% | Loss: 0.036450 | Hard: 0.0394 | Soft: 0.0235
+  Progress: 25.2% | Loss: 0.008158 | Hard: 0.0077 | Soft: 0.0077
+  Progress: 31.5% | Loss: 0.031835 | Hard: 0.0303 | Soft: 0.0303
+  Progress: 37.8% | Loss: 0.033983 | Hard: 0.0318 | Soft: 0.0350
+  Progress: 44.1% | Loss: 0.009039 | Hard: 0.0088 | Soft: 0.0086
+  Progress: 50.3% | Loss: 0.004127 | Hard: 0.0039 | Soft: 0.0041
+  Progress: 56.6% | Loss: 0.306900 | Hard: 0.3217 | Soft: 0.2477
+  Progress: 62.9% | Loss: 0.035183 | Hard: 0.0326 | Soft: 0.0337
+  Progress: 69.2% | Loss: 0.002077 | Hard: 0.0020 | Soft: 0.0019
+  Progress: 75.5% | Loss: 0.002497 | Hard: 0.0025 | Soft: 0.0024
+  Progress: 81.8% | Loss: 0.048200 | Hard: 0.0466 | Soft: 0.0465
+  Progress: 88.1% | Loss: 0.022733 | Hard: 0.0223 | Soft: 0.0197
+  Progress: 94.4% | Loss: 0.031393 | Hard: 0.0303 | Soft: 0.0280
+
+============================================================
+Epoch [15/100] | Time: 78.0s
+  Train Loss: 0.082221
+  Hard Loss: 0.082792 (vs 真实标签)
+  Soft Loss: 0.071160 (vs 教师)
+  FK Loss: 0.014596
+  Val MAE: 0.217146 | Val MSE: 0.195705
+============================================================
+  >>> 保存最优模型 (val_mae: 0.217146)
+
+Epoch [16/100] | LR: 0.000193
+  Progress: 6.3% | Loss: 0.438965 | Hard: 0.4710 | Soft: 0.3221
+  Progress: 12.6% | Loss: 0.020204 | Hard: 0.0200 | Soft: 0.0196
+  Progress: 18.9% | Loss: 0.028054 | Hard: 0.0310 | Soft: 0.0161
+  Progress: 25.2% | Loss: 0.007593 | Hard: 0.0072 | Soft: 0.0071
+  Progress: 31.5% | Loss: 0.037727 | Hard: 0.0359 | Soft: 0.0357
+  Progress: 37.8% | Loss: 0.034365 | Hard: 0.0321 | Soft: 0.0351
+  Progress: 44.1% | Loss: 0.009354 | Hard: 0.0091 | Soft: 0.0089
+  Progress: 50.3% | Loss: 0.004216 | Hard: 0.0040 | Soft: 0.0042
+  Progress: 56.6% | Loss: 0.305453 | Hard: 0.3197 | Soft: 0.2475
+  Progress: 62.9% | Loss: 0.035823 | Hard: 0.0333 | Soft: 0.0343
+  Progress: 69.2% | Loss: 0.001831 | Hard: 0.0017 | Soft: 0.0016
+  Progress: 75.5% | Loss: 0.002372 | Hard: 0.0023 | Soft: 0.0022
+  Progress: 81.8% | Loss: 0.047853 | Hard: 0.0463 | Soft: 0.0461
+  Progress: 88.1% | Loss: 0.023346 | Hard: 0.0230 | Soft: 0.0197
+  Progress: 94.4% | Loss: 0.031231 | Hard: 0.0301 | Soft: 0.0279
+
+============================================================
+Epoch [16/100] | Time: 78.7s
+  Train Loss: 0.081681
+  Hard Loss: 0.082259 (vs 真实标签)
+  Soft Loss: 0.070702 (vs 教师)
+  FK Loss: 0.014448
+  Val MAE: 0.219101 | Val MSE: 0.196502
+============================================================
+  无改善 (1/15)
+
+Epoch [17/100] | LR: 0.000192
+  Progress: 6.3% | Loss: 0.430994 | Hard: 0.4621 | Soft: 0.3161
+  Progress: 12.6% | Loss: 0.019397 | Hard: 0.0191 | Soft: 0.0188
+  Progress: 18.9% | Loss: 0.027210 | Hard: 0.0302 | Soft: 0.0156
+  Progress: 25.2% | Loss: 0.008330 | Hard: 0.0079 | Soft: 0.0079
+  Progress: 31.5% | Loss: 0.034990 | Hard: 0.0334 | Soft: 0.0334
+  Progress: 37.8% | Loss: 0.033362 | Hard: 0.0314 | Soft: 0.0337
+  Progress: 44.1% | Loss: 0.008522 | Hard: 0.0083 | Soft: 0.0081
+  Progress: 50.3% | Loss: 0.004055 | Hard: 0.0038 | Soft: 0.0040
+  Progress: 56.6% | Loss: 0.303309 | Hard: 0.3177 | Soft: 0.2453
+  Progress: 62.9% | Loss: 0.033645 | Hard: 0.0313 | Soft: 0.0325
+  Progress: 69.2% | Loss: 0.001647 | Hard: 0.0016 | Soft: 0.0016
+  Progress: 75.5% | Loss: 0.002412 | Hard: 0.0024 | Soft: 0.0023
+  Progress: 81.8% | Loss: 0.047559 | Hard: 0.0459 | Soft: 0.0459
+  Progress: 88.1% | Loss: 0.023570 | Hard: 0.0230 | Soft: 0.0204
+  Progress: 94.4% | Loss: 0.030844 | Hard: 0.0297 | Soft: 0.0274
+
+============================================================
+Epoch [17/100] | Time: 79.7s
+  Train Loss: 0.081402
+  Hard Loss: 0.081978 (vs 真实标签)
+  Soft Loss: 0.070496 (vs 教师)
+  FK Loss: 0.014344
+  Val MAE: 0.220078 | Val MSE: 0.196041
+============================================================
+  无改善 (2/15)
+
+Epoch [18/100] | LR: 0.000191
+  Progress: 6.3% | Loss: 0.432293 | Hard: 0.4630 | Soft: 0.3189
+  Progress: 12.6% | Loss: 0.019777 | Hard: 0.0196 | Soft: 0.0192
+  Progress: 18.9% | Loss: 0.026905 | Hard: 0.0297 | Soft: 0.0156
+  Progress: 25.2% | Loss: 0.007615 | Hard: 0.0072 | Soft: 0.0072
+  Progress: 31.5% | Loss: 0.033139 | Hard: 0.0316 | Soft: 0.0315
+  Progress: 37.8% | Loss: 0.032549 | Hard: 0.0310 | Soft: 0.0316
+  Progress: 44.1% | Loss: 0.008331 | Hard: 0.0081 | Soft: 0.0079
+  Progress: 50.3% | Loss: 0.004334 | Hard: 0.0041 | Soft: 0.0043
+  Progress: 56.6% | Loss: 0.303627 | Hard: 0.3181 | Soft: 0.2452
+  Progress: 62.9% | Loss: 0.033733 | Hard: 0.0313 | Soft: 0.0325
+  Progress: 69.2% | Loss: 0.001790 | Hard: 0.0017 | Soft: 0.0017
+  Progress: 75.5% | Loss: 0.002139 | Hard: 0.0021 | Soft: 0.0020
+  Progress: 81.8% | Loss: 0.046536 | Hard: 0.0448 | Soft: 0.0450
+  Progress: 88.1% | Loss: 0.023611 | Hard: 0.0233 | Soft: 0.0197
+  Progress: 94.4% | Loss: 0.029828 | Hard: 0.0288 | Soft: 0.0271
+
+============================================================
+Epoch [18/100] | Time: 80.4s
+  Train Loss: 0.080962
+  Hard Loss: 0.081549 (vs 真实标签)
+  Soft Loss: 0.070061 (vs 教师)
+  FK Loss: 0.014296
+  Val MAE: 0.223197 | Val MSE: 0.196341
+============================================================
+  无改善 (3/15)
+
+Epoch [19/100] | LR: 0.000190
+  Progress: 6.3% | Loss: 0.432694 | Hard: 0.4633 | Soft: 0.3188
+  Progress: 12.6% | Loss: 0.018576 | Hard: 0.0183 | Soft: 0.0181
+  Progress: 18.9% | Loss: 0.026435 | Hard: 0.0295 | Soft: 0.0146
+  Progress: 25.2% | Loss: 0.006740 | Hard: 0.0063 | Soft: 0.0063
+  Progress: 31.5% | Loss: 0.033728 | Hard: 0.0321 | Soft: 0.0317
+  Progress: 37.8% | Loss: 0.033801 | Hard: 0.0317 | Soft: 0.0343
+  Progress: 44.1% | Loss: 0.008525 | Hard: 0.0082 | Soft: 0.0081
+  Progress: 50.3% | Loss: 0.004238 | Hard: 0.0040 | Soft: 0.0042
+  Progress: 56.6% | Loss: 0.304069 | Hard: 0.3188 | Soft: 0.2453
+  Progress: 62.9% | Loss: 0.032632 | Hard: 0.0301 | Soft: 0.0314
+  Progress: 69.2% | Loss: 0.001462 | Hard: 0.0014 | Soft: 0.0014
+  Progress: 75.5% | Loss: 0.001869 | Hard: 0.0018 | Soft: 0.0018
+  Progress: 81.8% | Loss: 0.044800 | Hard: 0.0432 | Soft: 0.0433
+  Progress: 88.1% | Loss: 0.023154 | Hard: 0.0228 | Soft: 0.0196
+  Progress: 94.4% | Loss: 0.028930 | Hard: 0.0280 | Soft: 0.0262
+
+============================================================
+Epoch [19/100] | Time: 80.7s
+  Train Loss: 0.080235
+  Hard Loss: 0.080802 (vs 真实标签)
+  Soft Loss: 0.069419 (vs 教师)
+  FK Loss: 0.014238
+  Val MAE: 0.219963 | Val MSE: 0.196107
+============================================================
+  无改善 (4/15)
+
+Epoch [20/100] | LR: 0.000188
+  Progress: 6.3% | Loss: 0.432519 | Hard: 0.4645 | Soft: 0.3137
+  Progress: 12.6% | Loss: 0.016742 | Hard: 0.0164 | Soft: 0.0162
+  Progress: 18.9% | Loss: 0.027691 | Hard: 0.0306 | Soft: 0.0160
+  Progress: 25.2% | Loss: 0.007135 | Hard: 0.0067 | Soft: 0.0067
+  Progress: 31.5% | Loss: 0.034817 | Hard: 0.0331 | Soft: 0.0326
+  Progress: 37.8% | Loss: 0.033297 | Hard: 0.0314 | Soft: 0.0334
+  Progress: 44.1% | Loss: 0.008379 | Hard: 0.0080 | Soft: 0.0079
+  Progress: 50.3% | Loss: 0.004200 | Hard: 0.0040 | Soft: 0.0041
+  Progress: 56.6% | Loss: 0.306948 | Hard: 0.3218 | Soft: 0.2482
+  Progress: 62.9% | Loss: 0.034230 | Hard: 0.0317 | Soft: 0.0333
+  Progress: 69.2% | Loss: 0.001449 | Hard: 0.0014 | Soft: 0.0014
+  Progress: 75.5% | Loss: 0.001943 | Hard: 0.0019 | Soft: 0.0018
+  Progress: 81.8% | Loss: 0.043321 | Hard: 0.0419 | Soft: 0.0413
+  Progress: 88.1% | Loss: 0.020788 | Hard: 0.0204 | Soft: 0.0180
+  Progress: 94.4% | Loss: 0.031116 | Hard: 0.0298 | Soft: 0.0284
+
+============================================================
+Epoch [20/100] | Time: 80.1s
+  Train Loss: 0.080040
+  Hard Loss: 0.080616 (vs 真实标签)
+  Soft Loss: 0.069228 (vs 教师)
+  FK Loss: 0.014205
+  Val MAE: 0.218775 | Val MSE: 0.195712
+============================================================
+  无改善 (5/15)
+
+Epoch [21/100] | LR: 0.000186
+  Progress: 6.3% | Loss: 0.428693 | Hard: 0.4605 | Soft: 0.3093
+  Progress: 12.6% | Loss: 0.017269 | Hard: 0.0168 | Soft: 0.0166
+  Progress: 18.9% | Loss: 0.027959 | Hard: 0.0308 | Soft: 0.0162
+  Progress: 25.2% | Loss: 0.007398 | Hard: 0.0069 | Soft: 0.0070
+  Progress: 31.5% | Loss: 0.036389 | Hard: 0.0347 | Soft: 0.0345
+  Progress: 37.8% | Loss: 0.034702 | Hard: 0.0330 | Soft: 0.0339
+  Progress: 44.1% | Loss: 0.008255 | Hard: 0.0079 | Soft: 0.0078
+  Progress: 50.3% | Loss: 0.004143 | Hard: 0.0039 | Soft: 0.0041
+  Progress: 56.6% | Loss: 0.305947 | Hard: 0.3208 | Soft: 0.2472
+  Progress: 62.9% | Loss: 0.036635 | Hard: 0.0339 | Soft: 0.0355
+  Progress: 69.2% | Loss: 0.001829 | Hard: 0.0017 | Soft: 0.0016
+  Progress: 75.5% | Loss: 0.002151 | Hard: 0.0021 | Soft: 0.0021
+  Progress: 81.8% | Loss: 0.040587 | Hard: 0.0391 | Soft: 0.0389
+  Progress: 88.1% | Loss: 0.024421 | Hard: 0.0241 | Soft: 0.0199
+  Progress: 94.4% | Loss: 0.026656 | Hard: 0.0257 | Soft: 0.0245
+
+============================================================
+Epoch [21/100] | Time: 80.0s
+  Train Loss: 0.079603
+  Hard Loss: 0.080183 (vs 真实标签)
+  Soft Loss: 0.068842 (vs 教师)
+  FK Loss: 0.014113
+  Val MAE: 0.221012 | Val MSE: 0.196071
+============================================================
+  无改善 (6/15)
+
+Epoch [22/100] | LR: 0.000185
+  Progress: 6.3% | Loss: 0.414672 | Hard: 0.4445 | Soft: 0.3023
+  Progress: 12.6% | Loss: 0.018144 | Hard: 0.0178 | Soft: 0.0175
+  Progress: 18.9% | Loss: 0.026752 | Hard: 0.0296 | Soft: 0.0156
+  Progress: 25.2% | Loss: 0.007665 | Hard: 0.0071 | Soft: 0.0072
+  Progress: 31.5% | Loss: 0.035623 | Hard: 0.0339 | Soft: 0.0336
+  Progress: 37.8% | Loss: 0.035680 | Hard: 0.0342 | Soft: 0.0343
+  Progress: 44.1% | Loss: 0.008563 | Hard: 0.0082 | Soft: 0.0081
+  Progress: 50.3% | Loss: 0.004139 | Hard: 0.0039 | Soft: 0.0041
+  Progress: 56.6% | Loss: 0.305608 | Hard: 0.3203 | Soft: 0.2466
+  Progress: 62.9% | Loss: 0.033958 | Hard: 0.0314 | Soft: 0.0332
+  Progress: 69.2% | Loss: 0.001653 | Hard: 0.0016 | Soft: 0.0015
+  Progress: 75.5% | Loss: 0.002161 | Hard: 0.0021 | Soft: 0.0021
+  Progress: 81.8% | Loss: 0.041626 | Hard: 0.0402 | Soft: 0.0400
+  Progress: 88.1% | Loss: 0.025148 | Hard: 0.0249 | Soft: 0.0208
+  Progress: 94.4% | Loss: 0.026070 | Hard: 0.0252 | Soft: 0.0240
+
+============================================================
+Epoch [22/100] | Time: 79.5s
+  Train Loss: 0.078942
+  Hard Loss: 0.079478 (vs 真实标签)
+  Soft Loss: 0.068299 (vs 教师)
+  FK Loss: 0.014085
+  Val MAE: 0.218995 | Val MSE: 0.196498
+============================================================
+  无改善 (7/15)
+
+Epoch [23/100] | LR: 0.000183
+  Progress: 6.3% | Loss: 0.418525 | Hard: 0.4494 | Soft: 0.3028
+  Progress: 12.6% | Loss: 0.017556 | Hard: 0.0174 | Soft: 0.0171
+  Progress: 18.9% | Loss: 0.025797 | Hard: 0.0285 | Soft: 0.0146
+  Progress: 25.2% | Loss: 0.007623 | Hard: 0.0071 | Soft: 0.0072
+  Progress: 31.5% | Loss: 0.033532 | Hard: 0.0320 | Soft: 0.0316
+  Progress: 37.8% | Loss: 0.035410 | Hard: 0.0341 | Soft: 0.0339
+  Progress: 44.1% | Loss: 0.008169 | Hard: 0.0078 | Soft: 0.0077
+  Progress: 50.3% | Loss: 0.004091 | Hard: 0.0039 | Soft: 0.0040
+  Progress: 56.6% | Loss: 0.308437 | Hard: 0.3239 | Soft: 0.2474
+  Progress: 62.9% | Loss: 0.032276 | Hard: 0.0298 | Soft: 0.0314
+  Progress: 69.2% | Loss: 0.001682 | Hard: 0.0016 | Soft: 0.0015
+  Progress: 75.5% | Loss: 0.002362 | Hard: 0.0023 | Soft: 0.0022
+  Progress: 81.8% | Loss: 0.044024 | Hard: 0.0425 | Soft: 0.0423
+  Progress: 88.1% | Loss: 0.022747 | Hard: 0.0224 | Soft: 0.0194
+  Progress: 94.4% | Loss: 0.024970 | Hard: 0.0240 | Soft: 0.0234
+
+============================================================
+Epoch [23/100] | Time: 80.2s
+  Train Loss: 0.078448
+  Hard Loss: 0.078972 (vs 真实标签)
+  Soft Loss: 0.067862 (vs 教师)
+  FK Loss: 0.014046
+  Val MAE: 0.219018 | Val MSE: 0.196619
+============================================================
+  无改善 (8/15)
+
+Epoch [24/100] | LR: 0.000181
+  Progress: 6.3% | Loss: 0.419572 | Hard: 0.4494 | Soft: 0.3069
+  Progress: 12.6% | Loss: 0.017143 | Hard: 0.0169 | Soft: 0.0167
+  Progress: 18.9% | Loss: 0.025896 | Hard: 0.0287 | Soft: 0.0147
+  Progress: 25.2% | Loss: 0.006773 | Hard: 0.0063 | Soft: 0.0064
+  Progress: 31.5% | Loss: 0.034561 | Hard: 0.0332 | Soft: 0.0325
+  Progress: 37.8% | Loss: 0.035646 | Hard: 0.0339 | Soft: 0.0344
+  Progress: 44.1% | Loss: 0.007528 | Hard: 0.0073 | Soft: 0.0071
+  Progress: 50.3% | Loss: 0.003947 | Hard: 0.0037 | Soft: 0.0039
+  Progress: 56.6% | Loss: 0.312386 | Hard: 0.3274 | Soft: 0.2536
+  Progress: 62.9% | Loss: 0.033969 | Hard: 0.0315 | Soft: 0.0333
+  Progress: 69.2% | Loss: 0.001593 | Hard: 0.0015 | Soft: 0.0015
+  Progress: 75.5% | Loss: 0.002576 | Hard: 0.0026 | Soft: 0.0025
+  Progress: 81.8% | Loss: 0.044739 | Hard: 0.0431 | Soft: 0.0433
+  Progress: 88.1% | Loss: 0.025824 | Hard: 0.0252 | Soft: 0.0220
+  Progress: 94.4% | Loss: 0.024987 | Hard: 0.0241 | Soft: 0.0231
+
+============================================================
+Epoch [24/100] | Time: 80.6s
+  Train Loss: 0.078477
+  Hard Loss: 0.079013 (vs 真实标签)
+  Soft Loss: 0.067867 (vs 教师)
+  FK Loss: 0.014040
+  Val MAE: 0.220174 | Val MSE: 0.196072
+============================================================
+  无改善 (9/15)
+
+Epoch [25/100] | LR: 0.000179
+  Progress: 6.3% | Loss: 0.423577 | Hard: 0.4541 | Soft: 0.3088
+  Progress: 12.6% | Loss: 0.015698 | Hard: 0.0155 | Soft: 0.0152
+  Progress: 18.9% | Loss: 0.026224 | Hard: 0.0292 | Soft: 0.0148
+  Progress: 25.2% | Loss: 0.007038 | Hard: 0.0066 | Soft: 0.0066
+  Progress: 31.5% | Loss: 0.034364 | Hard: 0.0329 | Soft: 0.0327
+  Progress: 37.8% | Loss: 0.037154 | Hard: 0.0351 | Soft: 0.0365
+  Progress: 44.1% | Loss: 0.007875 | Hard: 0.0077 | Soft: 0.0075
+  Progress: 50.3% | Loss: 0.003953 | Hard: 0.0038 | Soft: 0.0039
+  Progress: 56.6% | Loss: 0.305859 | Hard: 0.3205 | Soft: 0.2469
+  Progress: 62.9% | Loss: 0.032649 | Hard: 0.0300 | Soft: 0.0319
+  Progress: 69.2% | Loss: 0.001367 | Hard: 0.0013 | Soft: 0.0013
+  Progress: 75.5% | Loss: 0.002414 | Hard: 0.0024 | Soft: 0.0023
+  Progress: 81.8% | Loss: 0.041206 | Hard: 0.0397 | Soft: 0.0395
+  Progress: 88.1% | Loss: 0.023581 | Hard: 0.0229 | Soft: 0.0207
+  Progress: 94.4% | Loss: 0.027723 | Hard: 0.0267 | Soft: 0.0256
+
+============================================================
+Epoch [25/100] | Time: 81.2s
+  Train Loss: 0.077765
+  Hard Loss: 0.078257 (vs 真实标签)
+  Soft Loss: 0.067281 (vs 教师)
+  FK Loss: 0.014006
+  Val MAE: 0.219827 | Val MSE: 0.197507
+============================================================
+  无改善 (10/15)
+
+Epoch [26/100] | LR: 0.000177
+  Progress: 6.3% | Loss: 0.423394 | Hard: 0.4532 | Soft: 0.3097
+  Progress: 12.6% | Loss: 0.016228 | Hard: 0.0159 | Soft: 0.0158
+  Progress: 18.9% | Loss: 0.025560 | Hard: 0.0287 | Soft: 0.0137
+  Progress: 25.2% | Loss: 0.007182 | Hard: 0.0067 | Soft: 0.0068
+  Progress: 31.5% | Loss: 0.031391 | Hard: 0.0300 | Soft: 0.0297
+  Progress: 37.8% | Loss: 0.034901 | Hard: 0.0329 | Soft: 0.0345
+  Progress: 44.1% | Loss: 0.008471 | Hard: 0.0083 | Soft: 0.0080
+  Progress: 50.3% | Loss: 0.003877 | Hard: 0.0037 | Soft: 0.0038
+  Progress: 56.6% | Loss: 0.308481 | Hard: 0.3230 | Soft: 0.2509
+  Progress: 62.9% | Loss: 0.033210 | Hard: 0.0306 | Soft: 0.0324
+  Progress: 69.2% | Loss: 0.001362 | Hard: 0.0013 | Soft: 0.0013
+  Progress: 75.5% | Loss: 0.002105 | Hard: 0.0021 | Soft: 0.0020
+  Progress: 81.8% | Loss: 0.042855 | Hard: 0.0412 | Soft: 0.0411
+  Progress: 88.1% | Loss: 0.024735 | Hard: 0.0239 | Soft: 0.0217
+  Progress: 94.4% | Loss: 0.027818 | Hard: 0.0268 | Soft: 0.0255
+
+============================================================
+Epoch [26/100] | Time: 81.5s
+  Train Loss: 0.077526
+  Hard Loss: 0.078000 (vs 真实标签)
+  Soft Loss: 0.067072 (vs 教师)
+  FK Loss: 0.014025
+  Val MAE: 0.218474 | Val MSE: 0.196837
+============================================================
+  无改善 (11/15)
+
+Epoch [27/100] | LR: 0.000175
+  Progress: 6.3% | Loss: 0.423591 | Hard: 0.4541 | Soft: 0.3074
+  Progress: 12.6% | Loss: 0.016225 | Hard: 0.0160 | Soft: 0.0157
+  Progress: 18.9% | Loss: 0.026386 | Hard: 0.0294 | Soft: 0.0148
+  Progress: 25.2% | Loss: 0.007059 | Hard: 0.0066 | Soft: 0.0067
+  Progress: 31.5% | Loss: 0.032127 | Hard: 0.0307 | Soft: 0.0305
+  Progress: 37.8% | Loss: 0.035359 | Hard: 0.0334 | Soft: 0.0345
+  Progress: 44.1% | Loss: 0.009812 | Hard: 0.0095 | Soft: 0.0093
+  Progress: 50.3% | Loss: 0.004101 | Hard: 0.0039 | Soft: 0.0040
+  Progress: 56.6% | Loss: 0.307536 | Hard: 0.3221 | Soft: 0.2491
+  Progress: 62.9% | Loss: 0.028745 | Hard: 0.0264 | Soft: 0.0282
+  Progress: 69.2% | Loss: 0.001469 | Hard: 0.0014 | Soft: 0.0014
+  Progress: 75.5% | Loss: 0.001933 | Hard: 0.0019 | Soft: 0.0018
+  Progress: 81.8% | Loss: 0.041640 | Hard: 0.0400 | Soft: 0.0398
+  Progress: 88.1% | Loss: 0.026907 | Hard: 0.0262 | Soft: 0.0231
+  Progress: 94.4% | Loss: 0.024817 | Hard: 0.0238 | Soft: 0.0227
+
+============================================================
+Epoch [27/100] | Time: 81.1s
+  Train Loss: 0.077271
+  Hard Loss: 0.077726 (vs 真实标签)
+  Soft Loss: 0.066861 (vs 教师)
+  FK Loss: 0.014024
+  Val MAE: 0.220048 | Val MSE: 0.197815
+============================================================
+  无改善 (12/15)
+
+Epoch [28/100] | LR: 0.000173
+  Progress: 6.3% | Loss: 0.429167 | Hard: 0.4600 | Soft: 0.3132
+  Progress: 12.6% | Loss: 0.016214 | Hard: 0.0160 | Soft: 0.0157
+  Progress: 18.9% | Loss: 0.026581 | Hard: 0.0296 | Soft: 0.0146
+  Progress: 25.2% | Loss: 0.007008 | Hard: 0.0066 | Soft: 0.0067
+  Progress: 31.5% | Loss: 0.031040 | Hard: 0.0296 | Soft: 0.0293
+  Progress: 37.8% | Loss: 0.034222 | Hard: 0.0324 | Soft: 0.0335
+  Progress: 44.1% | Loss: 0.011034 | Hard: 0.0107 | Soft: 0.0104
+  Progress: 50.3% | Loss: 0.004204 | Hard: 0.0040 | Soft: 0.0041
+  Progress: 56.6% | Loss: 0.304026 | Hard: 0.3183 | Soft: 0.2466
+  Progress: 62.9% | Loss: 0.030520 | Hard: 0.0281 | Soft: 0.0297
+  Progress: 69.2% | Loss: 0.001422 | Hard: 0.0013 | Soft: 0.0013
+  Progress: 75.5% | Loss: 0.001780 | Hard: 0.0017 | Soft: 0.0017
+  Progress: 81.8% | Loss: 0.041463 | Hard: 0.0397 | Soft: 0.0400
+  Progress: 88.1% | Loss: 0.026176 | Hard: 0.0257 | Soft: 0.0219
+  Progress: 94.4% | Loss: 0.026230 | Hard: 0.0253 | Soft: 0.0238
+
+============================================================
+Epoch [28/100] | Time: 80.3s
+  Train Loss: 0.076769
+  Hard Loss: 0.077232 (vs 真实标签)
+  Soft Loss: 0.066298 (vs 教师)
+  FK Loss: 0.014082
+  Val MAE: 0.218446 | Val MSE: 0.197140
+============================================================
+  无改善 (13/15)
+
+Epoch [29/100] | LR: 0.000170
+  Progress: 6.3% | Loss: 0.439145 | Hard: 0.4712 | Soft: 0.3196
+  Progress: 12.6% | Loss: 0.016161 | Hard: 0.0160 | Soft: 0.0157
+  Progress: 18.9% | Loss: 0.025058 | Hard: 0.0278 | Soft: 0.0141
+  Progress: 25.2% | Loss: 0.006701 | Hard: 0.0063 | Soft: 0.0064
+  Progress: 31.5% | Loss: 0.029334 | Hard: 0.0280 | Soft: 0.0275
+  Progress: 37.8% | Loss: 0.034590 | Hard: 0.0330 | Soft: 0.0334
+  Progress: 44.1% | Loss: 0.010258 | Hard: 0.0099 | Soft: 0.0097
+  Progress: 50.3% | Loss: 0.003947 | Hard: 0.0038 | Soft: 0.0039
+  Progress: 56.6% | Loss: 0.306155 | Hard: 0.3210 | Soft: 0.2468
+  Progress: 62.9% | Loss: 0.030945 | Hard: 0.0285 | Soft: 0.0303
+  Progress: 69.2% | Loss: 0.001560 | Hard: 0.0015 | Soft: 0.0015
+  Progress: 75.5% | Loss: 0.001950 | Hard: 0.0019 | Soft: 0.0018
+  Progress: 81.8% | Loss: 0.041758 | Hard: 0.0400 | Soft: 0.0398
+  Progress: 88.1% | Loss: 0.026386 | Hard: 0.0257 | Soft: 0.0222
+  Progress: 94.4% | Loss: 0.024413 | Hard: 0.0235 | Soft: 0.0224
+
+============================================================
+Epoch [29/100] | Time: 80.2s
+  Train Loss: 0.076690
+  Hard Loss: 0.077145 (vs 真实标签)
+  Soft Loss: 0.066239 (vs 教师)
+  FK Loss: 0.014083
+  Val MAE: 0.220239 | Val MSE: 0.198882
+============================================================
+  无改善 (14/15)
+
+Epoch [30/100] | LR: 0.000168
+  Progress: 6.3% | Loss: 0.444693 | Hard: 0.4779 | Soft: 0.3218
+  Progress: 12.6% | Loss: 0.015380 | Hard: 0.0152 | Soft: 0.0150
+  Progress: 18.9% | Loss: 0.027378 | Hard: 0.0303 | Soft: 0.0155
+  Progress: 25.2% | Loss: 0.006992 | Hard: 0.0066 | Soft: 0.0067
+  Progress: 31.5% | Loss: 0.028897 | Hard: 0.0276 | Soft: 0.0272
+  Progress: 37.8% | Loss: 0.032408 | Hard: 0.0307 | Soft: 0.0314
+  Progress: 44.1% | Loss: 0.010038 | Hard: 0.0097 | Soft: 0.0095
+  Progress: 50.3% | Loss: 0.003928 | Hard: 0.0038 | Soft: 0.0038
+  Progress: 56.6% | Loss: 0.304078 | Hard: 0.3186 | Soft: 0.2454
+  Progress: 62.9% | Loss: 0.032286 | Hard: 0.0298 | Soft: 0.0313
+  Progress: 69.2% | Loss: 0.001685 | Hard: 0.0016 | Soft: 0.0016
+  Progress: 75.5% | Loss: 0.001802 | Hard: 0.0018 | Soft: 0.0017
+  Progress: 81.8% | Loss: 0.040552 | Hard: 0.0389 | Soft: 0.0390
+  Progress: 88.1% | Loss: 0.026246 | Hard: 0.0255 | Soft: 0.0225
+  Progress: 94.4% | Loss: 0.023444 | Hard: 0.0225 | Soft: 0.0214
+
+============================================================
+Epoch [30/100] | Time: 80.2s
+  Train Loss: 0.076203
+  Hard Loss: 0.076651 (vs 真实标签)
+  Soft Loss: 0.065776 (vs 教师)
+  FK Loss: 0.014074
+  Val MAE: 0.217889 | Val MSE: 0.197982
+============================================================
+  无改善 (15/15)
+
+早停触发！停止训练。
+
+蒸馏训练完成！
+  最优验证 MAE: 0.217146
+  模型保存到: /home/bonuli/Pieper/pieper1702/improved_simplified_distilled_best.pth
